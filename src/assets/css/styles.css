@@ -436,6 +436,7 @@ body {
 .main__basket__product__absent {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
+    overflow: hidden;
 }
 
 .main__basket__product__absent.hidden {
