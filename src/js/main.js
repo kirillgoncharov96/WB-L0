@@ -1,6 +1,8 @@
 import showGoods from "./modules/showGoods";
 import closeCardGoods from "./modules/closeCardGoods";
 import chooseGoods from "./modules/сhooseGoods";
+import modalPayCard from "./modules/modalPayCard";
+import modalDeliveryCard from "./modules/modalDeliveryCard";
 
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
@@ -8,6 +10,9 @@ window.addEventListener('DOMContentLoaded', () => {
     showGoods();
     closeCardGoods();
     chooseGoods();
+    modalPayCard();
+    modalDeliveryCard();
+
 
     //Активация heart
     const btnsHeart = document.querySelectorAll('.control-buttons__favorite');

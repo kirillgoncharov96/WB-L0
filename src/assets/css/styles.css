@@ -11,6 +11,13 @@ body {
     background: var(--violet);
 }
 
+html.active {
+    position: fixed;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+}
+
 .wrapper {
     min-height: 100%;
     display: flex;
@@ -121,21 +128,21 @@ body {
 }
 
 .nav-element__logo {
-    display: flex;
+    display: inline-block;
     color: var(--system-white);
     font-family: "Segoe UI";
-    font-size: 29px;
+    font-size: 22px;
     font-weight: 600;
-    line-height: 24px;
-    font-variant: all-small-caps;
-    letter-spacing: 2.6px;
+    letter-spacing: 1.5px;
     text-decoration: none;
     white-space: pre-line;
     width: 106px;
-    padding: 1px 0px 7px 0px;
+    padding: 3px 0px 0px 1.3px;
+    height: 56px;
 
     @media (max-width: 767px) {
         width: auto;
+        height: auto;
         white-space: nowrap;
         font-family: "Segoe UI";
         font-size: 26px;
@@ -332,6 +339,10 @@ body {
     flex: 1 1 auto;
     background-color: var(--smoky);
     border-radius: 24px;
+
+    @media (max-width: 994px) {
+        display: grid;
+    }
 }
 
 .main__container {
@@ -340,11 +351,26 @@ body {
     max-width: 1400px;
     padding: 24px;
     margin: 0 auto;
+
+    @media (max-width: 994px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin: 0;
+    }
 }
 
 .main__basket {
     margin-top: 10px;
     width: 891px;
+
+    @media (max-width: 1150px) {
+        width: 640px;
+    }
+
+    @media (max-width: 994px) {
+        width: 100%;
+    }
 }
 
 .main__basket__title {
@@ -914,6 +940,11 @@ input[type="number"] {
 .tooltip__info-price {
     width: 239px;
     gap: 8px;
+
+    @media (max-width: 994px) {
+        right: 50%;
+        transform: translate(30px, 10px);
+    }
 }
 
 .tooltip__trigger:focus-visible ~ .tooltip,
@@ -949,6 +980,14 @@ input[type="number"] {
 
 .main__total-price {
     max-width: 429px;
+
+    @media (max-width: 1150px) {
+        max-width: 303px;
+    }
+
+    @media (max-width: 994px) {
+        max-width: 100%;
+    }
 }
 
 .main__total-price__wrapper {
@@ -1061,6 +1100,10 @@ input[type="number"] {
     align-items: center;
     margin-bottom: 4px;
     gap: 16px;
+
+    @media (max-width: 994px) {
+        display: none;
+    }
 }
 
 .delivery-location__title,
@@ -1092,6 +1135,10 @@ input[type="number"] {
     font-weight: 400;
     line-height: 16px;
     margin-bottom: 4px;
+
+    @media (max-width: 994px) {
+        display: none;
+    }
 }
 
 .delivery-location__date {
@@ -1105,6 +1152,10 @@ input[type="number"] {
     width: -moz-fit-content;
     width: fit-content;
     margin-bottom: 11px;
+
+    @media (max-width: 994px) {
+        display: none;
+    }
 }
 
 .main__total-price__purchase-return {
@@ -1157,6 +1208,10 @@ input[type="number"] {
     align-items: center;
     gap: 16px;
     margin-bottom: 4px;
+
+    @media (max-width: 994px) {
+        display: none;
+    }
 }
 
 .main__total-price__select-card {
@@ -1164,6 +1219,10 @@ input[type="number"] {
     align-items: center;
     gap: 8px;
     margin-bottom: 12px;
+
+    @media (max-width: 994px) {
+        display: none;
+    }
 }
 
 .select-card__icon {
@@ -1241,6 +1300,14 @@ input[type="number"] {
     font-weight: 400;
     line-height: 16px;
     margin: 0;
+
+    @media (max-width: 1024px) {
+        max-width: 217px;
+    }
+
+    @media (max-width: 994px) {
+        max-width: fit-content;
+    }
 }
 
 .purchase-agreement__rules-of-use,
@@ -1260,6 +1327,7 @@ input[type="number"] {
 
 .main__basket__product-delivery {
     margin-bottom: 16px;
+    position: relative;
 }
 
 .box__title {
@@ -1429,16 +1497,12 @@ input[type="number"] {
     margin-bottom: 0;
 }
 
-.delivery__info.purchase-return .purchase-return.tooltip__trigger {
-    position: relative;
-}
-
 .delivery__info.purchase-return .tooltip {
-    left: 35%;
+    left: 45%;
     width: 280px;
-    top: 140%;
-    -webkit-transform: translate(-35%, -140%);
-    transform: translate(-35%, -140%);
+    top: 114%;
+    -webkit-transform: translate(-45%, -114%);
+    transform: translate(-45%, -114%);
 }
 
 .main__basket__product__pay-method {
@@ -1489,6 +1553,10 @@ input[type="number"] {
 
 .main__basket__product-recipient {
     margin-bottom: 26px;
+
+    @media (max-width: 994px) {
+        margin-bottom: 15px;
+    }
 }
 
 .main__basket__product-recipient.form {
@@ -1833,7 +1901,7 @@ input[type="number"] {
     flex-direction: column;
     left: 50%;
     min-height: 408px;
-    min-width: 500px;
+    width: 500px;
     padding: 0 22px;
     position: fixed;
     top: 50%;
@@ -1885,6 +1953,7 @@ input[type="number"] {
     font-size: 13px;
     font-weight: 700;
     line-height: 16px;
+    cursor: pointer;
     /* min-width: 224px; */
     flex: 1 0 0;
     padding: 8px 0 10px;
@@ -1913,8 +1982,11 @@ input[type="number"] {
     flex-direction: column;
 }
 
+.modal__delivery-method__adress.hidden {
+    display: none;
+}
+
 .modal__delivery-method__item {
-    cursor: pointer;
     display: flex;
     gap: 8px;
 }

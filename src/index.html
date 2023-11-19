@@ -24,7 +24,7 @@
                         >
                             <span class="nav-element__burger-line"></span>
                         </button>
-                        <a href="#" class="nav-element__logo">Товары и точка</a>
+                        <a href="#" class="nav-element__logo">ТОВАРЫ И ТОЧКА</a>
                     </div>
                     <form
                         action="#"
@@ -100,14 +100,19 @@
                         <div class="main__basket__product-delivery box">
                             <div class="box__title">
                                 <h2 class="title__text">Способ доставки</h2>
-                                <button class="box__edit-btn">Изменить</button>
+                                <button
+                                    class="box__edit-btn"
+                                    id="delivery_edit"
+                                >
+                                    Изменить
+                                </button>
                             </div>
                             <div class="delivery__info location">
                                 <p class="location__delivery-method">
                                     Пункт выдачи
                                 </p>
                                 <div class="content">
-                                    <p class="location__adress">
+                                    <p class="location__adress" id="adress">
                                         г. Бишкек, микрорайон Джал, улица
                                         Ахунбаева Исы, д. 67/1
                                     </p>
@@ -190,13 +195,19 @@
                         <div class="main__basket__product__pay-method box">
                             <div class="box__title">
                                 <h2 class="title__text">Способ оплаты</h2>
-                                <button class="box__edit-btn">Изменить</button>
+                                <button
+                                    class="box__edit-btn"
+                                    id="pay-card__edit"
+                                >
+                                    Изменить
+                                </button>
                             </div>
                             <div class="pay-method__bank-card">
                                 <img
                                     src="./assets/icons/mir_card.svg"
                                     alt="Платежная система"
                                     class="pay-method__bank-card-icon"
+                                    id="pay_icon"
                                 />
                                 <p class="pay-method__bank-card-number">
                                     1234 56•• •••• 1234
@@ -361,10 +372,12 @@
                                 </h4>
                                 <button
                                     class="delivery-location__select"
+                                    id="delivery_edit"
                                 ></button>
                             </div>
-                            <span class="delivery-location__adress"
-                                >Бишкек, улица Ахматбека Суюмбаева, 12/1</span
+                            <span class="delivery-location__adress" id="adress"
+                                >г. Бишкек, микрорайон Джал, улица Ахунбаева
+                                Исы, д. 67/1</span
                             >
                             <span class="delivery-location__date">5–8 фев</span>
                             <div
@@ -397,7 +410,10 @@
                                 <h4 class="credit-card__title">
                                     Оплата картой
                                 </h4>
-                                <button class="credit-card__select"></button>
+                                <button
+                                    class="credit-card__select"
+                                    id="pay-card__edit"
+                                ></button>
                             </div>
                             <div
                                 class="main__total-price__select-card select-card"
@@ -406,6 +422,7 @@
                                     src="./assets/icons/mir_card.svg"
                                     alt="Платежная система"
                                     class="select-card__icon"
+                                    id="pay_icon"
                                 />
                                 <p class="select-card__number">
                                     1234 56•• •••• 1234
@@ -527,7 +544,7 @@
                 <div class="modal__payment-method__select bank-card">
                     <div class="bank-card" id="card-1">
                         <button
-                            class="bank-card__selected"
+                            class="bank-card__selected active"
                             type="button"
                         ></button>
                         <img
@@ -594,13 +611,31 @@
                     </button>
                 </div>
                 <p class="modal__delivery-method__description">Мои адреса</p>
-                <div class="modal__delivery-method__adress">
-                    <div class="modal__delivery-method__item">
-                        <button class="select__adress"></button>
+                <div class="modal__delivery-method__adress" id="point_location">
+                    <div class="modal__delivery-method__item" id="1">
+                        <button class="select__adress active"></button>
                         <div class="delivery-method__adress">
                             <p class="adress__text">
                                 г. Бишкек, микрорайон Джал, улица Ахунбаева Исы,
                                 д. 67/1
+                            </p>
+                            <span class="adress__info">
+                                <img
+                                    src="./assets/icons/rating_star_card.svg"
+                                    alt="Рейтинг"
+                                    class="adress__star"
+                                />
+                                <span class="adress__raiting">4.99</span>
+                                <span class="adress__point">Пункт выдачи</span>
+                            </span>
+                        </div>
+                        <button class="delete__adress" disabled></button>
+                    </div>
+                    <div class="modal__delivery-method__item" id="2">
+                        <button class="select__adress"></button>
+                        <div class="delivery-method__adress">
+                            <p class="adress__text">
+                                г. Бишкек, улица Ахматбека Суюмбаева, 12/1
                             </p>
                             <span class="adress__info">
                                 <img
@@ -614,25 +649,7 @@
                         </div>
                         <button class="delete__adress"></button>
                     </div>
-                    <div class="modal__delivery-method__item">
-                        <button class="select__adress"></button>
-                        <div class="delivery-method__adress">
-                            <p class="adress__text">
-                                г. Бишкек, улица Ахматбека Суюмбаева, 12/1
-                            </p>
-                            <span class="adress__info">
-                                <img
-                                    src="./assets/icons/rating_star_card.svg"
-                                    alt="Рейтинг"
-                                    class="adress__star"
-                                />
-                                <span class="adress__raiting">4.99</span>
-                                <span class="adress__point">Пункт выдачи</span>
-                            </span>
-                        </div>
-                        <button class="delete__adress"></button>
-                    </div>
-                    <div class="modal__delivery-method__item">
+                    <div class="modal__delivery-method__item" id="3">
                         <button class="select__adress"></button>
                         <div class="delivery-method__adress">
                             <p class="adress__text">
@@ -651,7 +668,39 @@
                         <button class="delete__adress"></button>
                     </div>
                 </div>
-                <div class="modal__delivery-method__adress"></div>
+                <div
+                    class="modal__delivery-method__adress hidden"
+                    id="cr_location"
+                >
+                    <div class="modal__delivery-method__item" id="4">
+                        <button class="select__adress"></button>
+                        <div class="delivery-method__adress">
+                            <p class="adress__text">
+                                Бишкек, улица Табышалиева, 57
+                            </p>
+                        </div>
+                        <button class="delete__adress"></button>
+                    </div>
+                    <div class="modal__delivery-method__item" id="5">
+                        <button class="select__adress"></button>
+                        <div class="delivery-method__adress">
+                            <p class="adress__text">
+                                Бишкек, улица Жукеева-Пудовкина, 77/1
+                            </p>
+                        </div>
+                        <button class="delete__adress"></button>
+                    </div>
+                    <div class="modal__delivery-method__item" id="6">
+                        <button class="select__adress"></button>
+                        <div class="delivery-method__adress">
+                            <p class="adress__text">
+                                Бишкек, микрорайон Джал, улица Ахунбаева Исы,
+                                67/1
+                            </p>
+                        </div>
+                        <button class="delete__adress"></button>
+                    </div>
+                </div>
                 <div class="modal__delivery-method__submit">
                     <button class="submit-btn">Выбрать</button>
                 </div>

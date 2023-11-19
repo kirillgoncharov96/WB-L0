@@ -11,6 +11,6 @@ git clone https://github.com/kirillgoncharov96/WB-L0.git
 # Install all dependencies
 npm i
 
-# Run app -- practice-1/2/3
+# Run app
 gulp
 ```

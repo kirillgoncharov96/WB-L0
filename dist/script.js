@@ -161,6 +161,242 @@ var closeCardGoods = function closeCardGoods() {
 
 /***/ }),
 
+/***/ "./src/js/modules/modalDeliveryCard.js":
+/*!*********************************************!*\
+  !*** ./src/js/modules/modalDeliveryCard.js ***!
+  \*********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1__);
+
+
+var modalDeliveryCard = function modalDeliveryCard() {
+  //Модальное окно выбора адреса и способа доставки (открыть\закрыть и адрес\доставка)
+  var btnTrigger = document.querySelectorAll('#delivery_edit'),
+    btnClose = document.querySelector('.modal__delivery-method__close-btn'),
+    btnCourierEdit = document.querySelector('.delivery-method__courier-btn'),
+    btnPickUpPointEdit = document.querySelector('.delivery-method__pickup-point-btn'),
+    btnsDelete = document.querySelectorAll('.delete__adress'),
+    submitBtn = document.querySelector('.modal__delivery-method__submit .submit-btn'),
+    checkbox = document.querySelectorAll('.select__adress'),
+    adressText = document.querySelectorAll('#adress'),
+    ratingValue = document.querySelector('.location__adress-info.number-rating');
+  var html = document.documentElement,
+    scrollPosition = window.pageYOffset,
+    paddinRight = window.innerWidth - document.body.offsetWidth;
+  document.querySelector('.modal__payment-method__wrapper').addEventListener('click', function (e) {
+    return e.preventDefault();
+  });
+  btnTrigger.forEach(function (item) {
+    item.addEventListener('click', function () {
+      html.style.marginRight = paddinRight + "px";
+      scrollPosition = window.pageYOffset;
+      html.style.top = -scrollPosition + "px";
+      html.classList.add('active');
+      document.querySelector('.modal__delivery-method__wrapper').style.left = document.body.offsetWidth / 2 + 'px';
+      document.querySelector('.modal__delivery-method').classList.add('active');
+    });
+  });
+  btnClose.addEventListener('click', function () {
+    html.style.marginRight = "0px";
+    html.classList.remove('active');
+    window.scrollTo(0, scrollPosition);
+    html.style.top = '';
+    document.querySelector('.modal__delivery-method').classList.remove('active');
+  });
+  btnsDelete.forEach(function (item) {
+    item.addEventListener('click', function (e) {
+      var adress = e.target.closest('.modal__delivery-method__item');
+      adress.remove();
+    });
+  });
+  btnCourierEdit.addEventListener('click', function () {
+    btnCourierEdit.classList.add('active');
+    btnPickUpPointEdit.classList.remove('active');
+    document.querySelector('#point_location').classList.add('hidden');
+    document.querySelector('#cr_location').classList.remove('hidden');
+  });
+  btnPickUpPointEdit.addEventListener('click', function () {
+    btnPickUpPointEdit.classList.add('active');
+    btnCourierEdit.classList.remove('active');
+    document.querySelector('#point_location').classList.remove('hidden');
+    document.querySelector('#cr_location').classList.add('hidden');
+  });
+  function deactivateButtons() {
+    checkbox.forEach(function (btn) {
+      btn.classList.remove('active');
+      btn.closest('.modal__delivery-method__item').querySelector('.delete__adress').disabled = false;
+    });
+  }
+  ;
+  checkbox.forEach(function (item) {
+    item.addEventListener('click', function (e) {
+      deactivateButtons();
+      item.classList.toggle('active');
+      item.closest('.modal__delivery-method__item').querySelector('.delete__adress').disabled = true;
+      var id = e.target.closest('.modal__delivery-method__item').id;
+      createDelivery(id);
+    });
+  });
+  function createDelivery(id) {
+    submitBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (btnPickUpPointEdit.classList.contains('active')) {
+        document.querySelector('.location__delivery-method').textContent = 'Пункт выдачи';
+        document.querySelector('.delivery-location__title').textContent = 'Доставка в пункт выдачи';
+        document.querySelector('.location__adress-info').style.display = 'flex';
+      } else {
+        document.querySelector('.location__delivery-method').textContent = 'Доставит курьер';
+        document.querySelector('.delivery-location__title').textContent = 'Доставка курьером';
+        document.querySelector('.location__adress-info').style.display = 'none';
+      }
+      switch (id) {
+        case '1':
+          ratingValue.textContent = '4.99';
+          adressText.forEach(function (item) {
+            return item.textContent = 'г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1';
+          });
+          break;
+        case '2':
+          ratingValue.textContent = '4.95';
+          adressText.forEach(function (item) {
+            return item.textContent = 'г. Бишкек, улица Ахматбека Суюмбаева, 12/1';
+          });
+          break;
+        case '3':
+          ratingValue.textContent = '4.98';
+          adressText.forEach(function (item) {
+            return item.textContent = 'г. Бишкек, улица Табышалиева, д. 57';
+          });
+          break;
+        case '4':
+          adressText.forEach(function (item) {
+            return item.textContent = 'Бишкек, улица Табышалиева, 57';
+          });
+          break;
+        case '5':
+          adressText.forEach(function (item) {
+            return item.textContent = 'Бишкек, улица Жукеева-Пудовкина, 77/1';
+          });
+          break;
+        case '6':
+          adressText.forEach(function (item) {
+            return item.textContent = 'Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1';
+          });
+          break;
+        default:
+          return;
+      }
+      btnClose.click();
+    });
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (modalDeliveryCard);
+
+/***/ }),
+
+/***/ "./src/js/modules/modalPayCard.js":
+/*!****************************************!*\
+  !*** ./src/js/modules/modalPayCard.js ***!
+  \****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1__);
+
+
+var modalPayCard = function modalPayCard() {
+  //Модальное окно выбора карты (открыть\закрыть и выбор платежной карты)
+  var btnTrigger = document.querySelectorAll('#pay-card__edit'),
+    btnClose = document.querySelector('.modal__payment-method__close-btn'),
+    checkBoxCard = document.querySelectorAll('.bank-card__selected'),
+    btnCard = document.querySelectorAll('.modal__payment-method__select.bank-card .bank-card'),
+    submitBtn = document.querySelector('.modal__payment-method__submit .submit-btn'),
+    dateCard = document.querySelector('.pay-method__bank-card-date'),
+    selectCard = document.querySelectorAll('#pay_icon');
+  var html = document.documentElement,
+    scrollPosition = window.pageYOffset,
+    paddinRight = window.innerWidth - document.body.offsetWidth;
+  document.querySelector('.modal__payment-method__wrapper').addEventListener('click', function (e) {
+    return e.preventDefault();
+  });
+  btnTrigger.forEach(function (item) {
+    item.addEventListener('click', function () {
+      html.style.marginRight = paddinRight + "px";
+      scrollPosition = window.pageYOffset;
+      html.style.top = -scrollPosition + "px";
+      html.classList.add('active');
+      document.querySelector('.modal__payment-method__wrapper').style.left = document.body.offsetWidth / 2 + 'px';
+      document.querySelector('.modal__payment-method').classList.add('active');
+    });
+  });
+  btnClose.addEventListener('click', function () {
+    html.style.marginRight = "0px";
+    html.classList.remove('active');
+    window.scrollTo(0, scrollPosition);
+    html.style.top = '';
+    document.querySelector('.modal__payment-method').classList.remove('active');
+  });
+  function deactivateButtons() {
+    checkBoxCard.forEach(function (btn) {
+      btn.classList.remove('active');
+    });
+  }
+  ;
+  btnCard.forEach(function (item) {
+    item.addEventListener('click', function () {
+      deactivateButtons();
+      item.querySelector('.bank-card__selected').classList.toggle('active');
+      var cardId = item.id;
+      createContent(cardId);
+    });
+  });
+  function createContent(id) {
+    submitBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      switch (id) {
+        case 'card-1':
+          dateCard.textContent = '01/30';
+          selectCard.forEach(function (item) {
+            return item.src = './assets/icons/mir_card.svg';
+          });
+          break;
+        case 'card-2':
+          dateCard.textContent = '05/23';
+          selectCard.forEach(function (item) {
+            return item.src = './assets/icons/visa_card.svg';
+          });
+          break;
+        case 'card-3':
+          dateCard.textContent = '05/28';
+          selectCard.forEach(function (item) {
+            return item.src = './assets/icons/mastercard_card.svg';
+          });
+          break;
+        case 'card-4':
+          dateCard.textContent = '04/25';
+          selectCard.forEach(function (item) {
+            return item.src = './assets/icons/maestro_card.svg';
+          });
+          break;
+        default:
+          return;
+      }
+      btnClose.click();
+    });
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (modalPayCard);
+
+/***/ }),
+
 /***/ "./src/js/modules/showGoods.js":
 /*!*************************************!*\
   !*** ./src/js/modules/showGoods.js ***!
@@ -4558,6 +4794,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_showGoods__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/showGoods */ "./src/js/modules/showGoods.js");
 /* harmony import */ var _modules_closeCardGoods__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/closeCardGoods */ "./src/js/modules/closeCardGoods.js");
 /* harmony import */ var _modules_hooseGoods__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/сhooseGoods */ "./src/js/modules/сhooseGoods.js");
+/* harmony import */ var _modules_modalPayCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/modalPayCard */ "./src/js/modules/modalPayCard.js");
+/* harmony import */ var _modules_modalDeliveryCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/modalDeliveryCard */ "./src/js/modules/modalDeliveryCard.js");
+
+
 
 
 
@@ -4569,6 +4809,8 @@ window.addEventListener('DOMContentLoaded', function () {
   (0,_modules_showGoods__WEBPACK_IMPORTED_MODULE_2__["default"])();
   (0,_modules_closeCardGoods__WEBPACK_IMPORTED_MODULE_3__["default"])();
   (0,_modules_hooseGoods__WEBPACK_IMPORTED_MODULE_4__["default"])();
+  (0,_modules_modalPayCard__WEBPACK_IMPORTED_MODULE_5__["default"])();
+  (0,_modules_modalDeliveryCard__WEBPACK_IMPORTED_MODULE_6__["default"])();
 
   //Активация heart
   var btnsHeart = document.querySelectorAll('.control-buttons__favorite');
