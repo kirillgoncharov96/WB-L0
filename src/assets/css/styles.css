@@ -509,6 +509,10 @@ html.active {
     gap: 32px;
     transition: max-height 0.5s ease-out;
     max-height: 477px;
+
+    @media (max-width: 680px) {
+        max-height: 560px;
+    }
 }
 
 .product__card__wrapper.hidden {
@@ -521,6 +525,10 @@ html.active {
     gap: 32px;
     transition: max-height 0.5s ease-out;
     max-height: 363px;
+
+    @media (max-width: 620px) {
+        max-height: 560px;
+    }
 }
 
 .product__card__wrapper__absent.hidden {
@@ -602,6 +610,10 @@ html.active {
     margin: 0px auto 0 16px;
     align-self: stretch;
     flex: 1 0 0;
+
+    /* @media (max-width: 610px) {
+        margin: 0px a;
+    } */
 }
 
 .item-3__details .product__card__info {
@@ -648,6 +660,14 @@ html.active {
     margin: 0 0 8px 0;
 }
 
+.product__card.item-1
+    .product__card__description-text:last-of-type:last-of-type,
+.product__card__absent.item-1 .product__card__description-text:last-of-type {
+    @media (max-width: 570px) {
+        display: none;
+    }
+}
+
 .product__card__absent.item-1 .product__card__description-text,
 .product__card__absent.item-2 .product__card__description-text {
     color: var(--system-gray);
@@ -667,6 +687,10 @@ html.active {
     display: flex;
     gap: 6px;
     align-items: center;
+
+    @media (max-width: 610px) {
+        display: none;
+    }
 }
 
 .product__card__legal-entity-name {
@@ -1212,6 +1236,10 @@ input[type="number"] {
     padding: 8px 8px 12px 8px;
     margin-bottom: 24px;
     position: relative;
+
+    @media (max-width: 767px) {
+        background: var(--smoky-dark);
+    }
 }
 
 .purchase-return__icon {
@@ -1294,6 +1322,10 @@ input[type="number"] {
     padding: 8px 8px 12px 8px;
     flex-direction: column;
     margin-bottom: 24px;
+
+    @media (max-width: 767px) {
+        background: var(--smoky-dark);
+    }
 }
 
 .select-paymethod__box {
