@@ -1065,6 +1065,14 @@ html.active {
     padding: 0px;
 }
 
+.selector__counter-minus:focus-visible,
+.selector__counter-plus:focus-visible,
+.selector__counter-minus:hover,
+.selector__counter-plus:hover {
+    background-color: var(--light-system-gray);
+    border-radius: 8px;
+}
+
 .selector__counter-minus span {
     position: relative;
     left: 1px;
@@ -2123,17 +2131,36 @@ input[type="number"] {
 
 label.invalid input.shake,
 label.invalid input.shake ~ span {
+    -webkit-animation: shake 0.35s;
     animation: shake 0.35s;
+}
+
+@-webkit-keyframes shake {
+    25% {
+        -webkit-transform: translate(6px);
+        transform: translate(6px);
+    }
+    50% {
+        -webkit-transform: translate(-6px);
+        transform: translate(-6px);
+    }
+    75% {
+        -webkit-transform: translate(6px);
+        transform: translate(6px);
+    }
 }
 
 @keyframes shake {
     25% {
+        -webkit-transform: translate(6px);
         transform: translate(6px);
     }
     50% {
+        -webkit-transform: translate(-6px);
         transform: translate(-6px);
     }
     75% {
+        -webkit-transform: translate(6px);
         transform: translate(6px);
     }
 }
