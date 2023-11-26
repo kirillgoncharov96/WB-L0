@@ -3,6 +3,7 @@ import closeCardGoods from "./modules/closeCardGoods";
 import chooseGoods from "./modules/сhooseGoods";
 import modalPayCard from "./modules/modalPayCard";
 import modalDeliveryCard from "./modules/modalDeliveryCard";
+import formValidation from "./modules/formValidation";
 
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
@@ -12,6 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
     chooseGoods();
     modalPayCard();
     modalDeliveryCard();
+    formValidation();
 
 
     //Активация heart
