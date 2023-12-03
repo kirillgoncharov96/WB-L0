@@ -156,7 +156,7 @@ const showGoods = () => {
                                 >
                                 <span
                                     class="tooltip__value"
-                                    >−300 сом</span
+                                    >${item.discount.valueShop}</span
                                 >
                             </div>
                             <div
@@ -169,7 +169,7 @@ const showGoods = () => {
                                 >
                                 <span
                                     class="tooltip__value"
-                                    >−30 сом</span
+                                    >${item.discount.valuePers}</span
                                 >
                             </div>
                         </div>
@@ -285,7 +285,7 @@ const showGoods = () => {
                             class="product__card__price__with-discount"
                         >
                             <p class="product__card__value">
-                            2 300 041
+                            ${item.priceDiscount}
                             </p>
                             <span
                                 class="product__card__currency"
@@ -313,7 +313,7 @@ const showGoods = () => {
                                     >
                                     <span
                                         class="tooltip__value"
-                                        >−300 сом</span
+                                        >${item.discount.valueShop}</span
                                     >
                                 </div>
                                 <div
@@ -326,7 +326,7 @@ const showGoods = () => {
                                     >
                                     <span
                                         class="tooltip__value"
-                                        >−30 сом</span
+                                        >${item.discount.valuePers}</span
                                     >
                                 </div>
                             </div>
@@ -466,7 +466,7 @@ const showGoods = () => {
                                     >
                                     <span
                                         class="tooltip__value"
-                                        >−300 сом</span
+                                        >${item.discount.valueShop}</span
                                     >
                                 </div>
                                 <div
@@ -479,7 +479,7 @@ const showGoods = () => {
                                     >
                                     <span
                                         class="tooltip__value"
-                                        >−30 сом</span
+                                        >${item.discount.valuePers}</span
                                     >
                                 </div>
                             </div>

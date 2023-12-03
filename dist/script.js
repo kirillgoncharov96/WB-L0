@@ -12,40 +12,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   Data: function() { return /* binding */ Data; }
 /* harmony export */ });
-/* harmony import */ var core_js_modules_es_symbol_to_primitive_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.symbol.to-primitive.js */ "./node_modules/core-js/modules/es.symbol.to-primitive.js");
-/* harmony import */ var core_js_modules_es_symbol_to_primitive_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_to_primitive_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_date_to_primitive_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.date.to-primitive.js */ "./node_modules/core-js/modules/es.date.to-primitive.js");
-/* harmony import */ var core_js_modules_es_date_to_primitive_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_date_to_primitive_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.symbol.js */ "./node_modules/core-js/modules/es.symbol.js");
-/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_symbol_description_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.symbol.description.js */ "./node_modules/core-js/modules/es.symbol.description.js");
-/* harmony import */ var core_js_modules_es_symbol_description_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_description_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.number.constructor.js */ "./node_modules/core-js/modules/es.number.constructor.js");
-/* harmony import */ var core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var core_js_modules_es_symbol_iterator_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.symbol.iterator.js */ "./node_modules/core-js/modules/es.symbol.iterator.js");
-/* harmony import */ var core_js_modules_es_symbol_iterator_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_iterator_js__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.array.iterator.js */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.string.iterator.js */ "./node_modules/core-js/modules/es.string.iterator.js");
-/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_9__);
-
-
-
-
-
-
-
-
-
-
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
-function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 var Data = [{
   id: 1,
   title: 'Футболка UZcotton мужская',
@@ -65,12 +31,13 @@ var Data = [{
   quantityStart: 1,
   remainingGoods: 2,
   price: 1051,
-  priceDiscount: 522,
-  discount: _defineProperty({
+  priceDiscount: 368,
+  discount: {
     discShop: 'Скидка 55%',
-    valueShop: '−300 сом',
-    discPers: 'Скидка покупателя 10%'
-  }, "valueShop", '−30 сом')
+    valueShop: '−578 сом',
+    discPers: 'Скидка покупателя 10%',
+    valuePers: '−105 сом'
+  }
 }, {
   id: 2,
   title: 'Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe',
@@ -87,13 +54,14 @@ var Data = [{
   },
   quantityMin: 1,
   quantityStart: 200,
-  price: 11500,
-  priceDiscount: 2300047,
-  discount: _defineProperty({
+  price: '2 300 000',
+  priceDiscount: '805 000',
+  discount: {
     discShop: 'Скидка 55%',
-    valueShop: '−300 сом',
-    discPers: 'Скидка покупателя 10%'
-  }, "valueShop", '−30 сом')
+    valueShop: '−6325 сом',
+    discPers: 'Скидка покупателя 10%',
+    valuePers: '−1150 сом'
+  }
 }, {
   id: 3,
   title: 'Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber-Castell',
@@ -108,13 +76,14 @@ var Data = [{
   quantityMin: 1,
   quantityStart: 2,
   remainingGoods: 2,
-  price: 247,
-  priceDiscount: 245,
-  discount: _defineProperty({
+  price: 950,
+  priceDiscount: 334,
+  discount: {
     discShop: 'Скидка 55%',
-    valueShop: '−300 сом',
-    discPers: 'Скидка покупателя 10%'
-  }, "valueShop", '−30 сом')
+    valueShop: '−261 сом',
+    discPers: 'Скидка покупателя 10%',
+    valuePers: '−48 сом'
+  }
 }];
 
 /***/ }),
@@ -690,13 +659,13 @@ var showGoods = function showGoods() {
     var card = document.createElement("div");
     if (item.id === 1) {
       card.classList.add("product__card", "item-".concat(item.id));
-      card.innerHTML = "\n            <div class=\"item-".concat(item.id, "__details\">\n                <button\n                    class=\"checkbox product-card\"\n                    type=\"button\"\n                ></button>\n                <div class=\"item-").concat(item.id, "__details__img\">\n                    <img\n                        src=").concat(item.img, "\n                        alt=\"\u0418\u0437\u043E\u0431\u0440\u0430\u0436\u0435\u043D\u0438\u0435 \u0442\u043E\u0432\u0430\u0440\u0430 \u0444\u0443\u0442\u0431\u043E\u043B\u043A\u0430\"\n                    />\n                    <div\n                        class=\"item-").concat(item.id, "__details__img-prop\"\n                    >\n                        56\n                    </div>\n                </div>\n                <div class=\"product__card__info\">\n                    <h6 class=\"product__card__title\">\n                        ").concat(item.title, "\n                    </h6>\n                    <div\n                        class=\"product__card__description\"\n                    >\n                        <p\n                            class=\"product__card__description-text\"\n                        >\n                            ").concat(item.description.color, "\n                        </p>\n                        <p\n                            class=\"product__card__description-text\"\n                        >\n                            ").concat(item.description.size, "\n                        </p>\n                    </div>\n                    <p class=\"product__card__location\">\n                        ").concat(item.location, "\n                    </p>\n                    <div\n                        class=\"product__card__legal-entity\"\n                    >\n                        <p\n                            class=\"product__card__legal-entity-name\"\n                        >\n                            ").concat(item.legalEntity, "\n                        </p>\n                        <button\n                            class=\"info tooltip__trigger\"\n                            type=\"button\"\n                        >\n                            <div class=\"tooltip\">\n                                <span\n                                    class=\"tooltip__title\"\n                                >\n                                    ").concat(item.tooltip.tooltipTitle, "\n                                </span>\n                                <span\n                                    class=\"tooltip__text\"\n                                >\n                                    ").concat(item.tooltip.tooltipText, "\n                                </span>\n                                <span\n                                    class=\"tooltip__text\"\n                                >\n                                    ").concat(item.tooltip.tooltipAdress, "\n                                </span>\n                            </div>\n                        </button>\n                    </div>\n                </div>\n                <div\n                    class=\"product__card__quantity-goods\"\n                >\n                    <div\n                        class=\"product__card__quantity-goods__selector selector__counter\"\n                    >\n                        <button\n                            class=\"selector__counter-minus disabled\"\n                            type=\"button\"\n                            disabled\n                        >\n                            <span>-</span>\n                        </button>\n                        <input\n                            type=\"text\"\n                            class=\"selector__counter-number\"\n                            min=\"1\"\n                            maxlength=\"3\"\n                            value=").concat(item.quantityStart, "\n                            onkeypress=\"return event.charCode >= 48 && event.charCode <= 57\"\n                        />\n                        <button\n                            class=\"selector__counter-plus\"\n                            type=\"button\"\n                        >\n                            <span>+</span>\n                        </button>\n                    </div>\n                    <span\n                        class=\"product__card__quantity-goods__text-caption\"\n                        >\u041E\u0441\u0442\u0430\u043B\u043E\u0441\u044C ").concat(item.remainingGoods, " \u0448\u0442.</span\n                    >\n                    <div\n                        class=\"product__card__quantity-goods__icons control-buttons\"\n                    >\n                        <button\n                            class=\"control-buttons__favorite\"\n                            type=\"button\"\n                        ></button>\n                        <button\n                            class=\"control-buttons__delete\"\n                            type=\"button\"\n                        ></button>\n                    </div>\n                </div>\n                <div class=\"product__card__price\">\n                    <div\n                        class=\"product__card__price__with-discount\"\n                    >\n                        <p class=\"product__card__value\">\n                        ").concat(item.priceDiscount, "\n                        </p>\n                        <span\n                            class=\"product__card__currency\"\n                            >\u0441\u043E\u043C</span\n                        >\n                    </div>\n                    <button\n                        type=\"button\"\n                        class=\"product__card__price-full discount\"\n                    >\n                        <span\n                            class=\"discount__value tooltip__trigger\"\n                        >\n                            ").concat(item.price, " \u0441\u043E\u043C\n                        </span>\n                        <div\n                            class=\"tooltip tooltip__info-price\"\n                        >\n                            <div\n                                class=\"tooltip__info-price__disc-shop\"\n                            >\n                                <span\n                                    class=\"tooltip__disc\"\n                                    >\u0421\u043A\u0438\u0434\u043A\u0430 55%</span\n                                >\n                                <span\n                                    class=\"tooltip__value\"\n                                    >\u2212300 \u0441\u043E\u043C</span\n                                >\n                            </div>\n                            <div\n                                class=\"tooltip__info-price__disc-personal\"\n                            >\n                                <span\n                                    class=\"tooltip__disc\"\n                                    >\u0421\u043A\u0438\u0434\u043A\u0430 \u043F\u043E\u043A\u0443\u043F\u0430\u0442\u0435\u043B\u044F\n                                    10%</span\n                                >\n                                <span\n                                    class=\"tooltip__value\"\n                                    >\u221230 \u0441\u043E\u043C</span\n                                >\n                            </div>\n                        </div>\n                    </button>\n                </div>\n            </div>\n        ");
+      card.innerHTML = "\n            <div class=\"item-".concat(item.id, "__details\">\n                <button\n                    class=\"checkbox product-card\"\n                    type=\"button\"\n                ></button>\n                <div class=\"item-").concat(item.id, "__details__img\">\n                    <img\n                        src=").concat(item.img, "\n                        alt=\"\u0418\u0437\u043E\u0431\u0440\u0430\u0436\u0435\u043D\u0438\u0435 \u0442\u043E\u0432\u0430\u0440\u0430 \u0444\u0443\u0442\u0431\u043E\u043B\u043A\u0430\"\n                    />\n                    <div\n                        class=\"item-").concat(item.id, "__details__img-prop\"\n                    >\n                        56\n                    </div>\n                </div>\n                <div class=\"product__card__info\">\n                    <h6 class=\"product__card__title\">\n                        ").concat(item.title, "\n                    </h6>\n                    <div\n                        class=\"product__card__description\"\n                    >\n                        <p\n                            class=\"product__card__description-text\"\n                        >\n                            ").concat(item.description.color, "\n                        </p>\n                        <p\n                            class=\"product__card__description-text\"\n                        >\n                            ").concat(item.description.size, "\n                        </p>\n                    </div>\n                    <p class=\"product__card__location\">\n                        ").concat(item.location, "\n                    </p>\n                    <div\n                        class=\"product__card__legal-entity\"\n                    >\n                        <p\n                            class=\"product__card__legal-entity-name\"\n                        >\n                            ").concat(item.legalEntity, "\n                        </p>\n                        <button\n                            class=\"info tooltip__trigger\"\n                            type=\"button\"\n                        >\n                            <div class=\"tooltip\">\n                                <span\n                                    class=\"tooltip__title\"\n                                >\n                                    ").concat(item.tooltip.tooltipTitle, "\n                                </span>\n                                <span\n                                    class=\"tooltip__text\"\n                                >\n                                    ").concat(item.tooltip.tooltipText, "\n                                </span>\n                                <span\n                                    class=\"tooltip__text\"\n                                >\n                                    ").concat(item.tooltip.tooltipAdress, "\n                                </span>\n                            </div>\n                        </button>\n                    </div>\n                </div>\n                <div\n                    class=\"product__card__quantity-goods\"\n                >\n                    <div\n                        class=\"product__card__quantity-goods__selector selector__counter\"\n                    >\n                        <button\n                            class=\"selector__counter-minus disabled\"\n                            type=\"button\"\n                            disabled\n                        >\n                            <span>-</span>\n                        </button>\n                        <input\n                            type=\"text\"\n                            class=\"selector__counter-number\"\n                            min=\"1\"\n                            maxlength=\"3\"\n                            value=").concat(item.quantityStart, "\n                            onkeypress=\"return event.charCode >= 48 && event.charCode <= 57\"\n                        />\n                        <button\n                            class=\"selector__counter-plus\"\n                            type=\"button\"\n                        >\n                            <span>+</span>\n                        </button>\n                    </div>\n                    <span\n                        class=\"product__card__quantity-goods__text-caption\"\n                        >\u041E\u0441\u0442\u0430\u043B\u043E\u0441\u044C ").concat(item.remainingGoods, " \u0448\u0442.</span\n                    >\n                    <div\n                        class=\"product__card__quantity-goods__icons control-buttons\"\n                    >\n                        <button\n                            class=\"control-buttons__favorite\"\n                            type=\"button\"\n                        ></button>\n                        <button\n                            class=\"control-buttons__delete\"\n                            type=\"button\"\n                        ></button>\n                    </div>\n                </div>\n                <div class=\"product__card__price\">\n                    <div\n                        class=\"product__card__price__with-discount\"\n                    >\n                        <p class=\"product__card__value\">\n                        ").concat(item.priceDiscount, "\n                        </p>\n                        <span\n                            class=\"product__card__currency\"\n                            >\u0441\u043E\u043C</span\n                        >\n                    </div>\n                    <button\n                        type=\"button\"\n                        class=\"product__card__price-full discount\"\n                    >\n                        <span\n                            class=\"discount__value tooltip__trigger\"\n                        >\n                            ").concat(item.price, " \u0441\u043E\u043C\n                        </span>\n                        <div\n                            class=\"tooltip tooltip__info-price\"\n                        >\n                            <div\n                                class=\"tooltip__info-price__disc-shop\"\n                            >\n                                <span\n                                    class=\"tooltip__disc\"\n                                    >\u0421\u043A\u0438\u0434\u043A\u0430 55%</span\n                                >\n                                <span\n                                    class=\"tooltip__value\"\n                                    >").concat(item.discount.valueShop, "</span\n                                >\n                            </div>\n                            <div\n                                class=\"tooltip__info-price__disc-personal\"\n                            >\n                                <span\n                                    class=\"tooltip__disc\"\n                                    >\u0421\u043A\u0438\u0434\u043A\u0430 \u043F\u043E\u043A\u0443\u043F\u0430\u0442\u0435\u043B\u044F\n                                    10%</span\n                                >\n                                <span\n                                    class=\"tooltip__value\"\n                                    >").concat(item.discount.valuePers, "</span\n                                >\n                            </div>\n                        </div>\n                    </button>\n                </div>\n            </div>\n        ");
     } else if (item.id === 2) {
       card.classList.add("product__card", "item-".concat(item.id));
-      card.innerHTML = "\n                <div class=\"item-".concat(item.id, "__details\">\n                    <button\n                        class=\"checkbox product-card\"\n                        type=\"button\"\n                    ></button>\n                    <div class=\"item-").concat(item.id, "__details__img\">\n                        <img\n                            src=").concat(item.img, "\n                            alt=\"\u0418\u0437\u043E\u0431\u0440\u0430\u0436\u0435\u043D\u0438\u0435 \u0442\u043E\u0432\u0430\u0440\u0430 \u0444\u0443\u0442\u0431\u043E\u043B\u043A\u0430\"\n                        />\n                    </div>\n                    <div class=\"product__card__info\">\n                        <h6 class=\"product__card__title\">\n                            ").concat(item.title, "\n                        </h6>\n                        <div\n                            class=\"product__card__description\"\n                        >\n                            <p\n                                class=\"product__card__description-text\"\n                            >\n                                ").concat(item.description.color, "\n                            </p>\n                        </div>\n                        <p class=\"product__card__location\">\n                            ").concat(item.location, "\n                        </p>\n                        <div\n                            class=\"product__card__legal-entity\"\n                        >\n                            <p\n                                class=\"product__card__legal-entity-name\"\n                            >\n                                ").concat(item.legalEntity, "\n                            </p>\n                            <button\n                                class=\"info tooltip__trigger\"\n                                type=\"button\"\n                            >\n                                <div class=\"tooltip\">\n                                    <span\n                                        class=\"tooltip__title\"\n                                    >\n                                        ").concat(item.tooltip.tooltipTitle, "\n                                    </span>\n                                    <span\n                                        class=\"tooltip__text\"\n                                    >\n                                        ").concat(item.tooltip.tooltipText, "\n                                    </span>\n                                    <span\n                                        class=\"tooltip__text\"\n                                    >\n                                        ").concat(item.tooltip.tooltipAdress, "\n                                    </span>\n                                </div>\n                            </button>\n                        </div>\n                    </div>\n                    <div\n                        class=\"product__card__quantity-goods\"\n                    >\n                        <div\n                            class=\"product__card__quantity-goods__selector selector__counter\"\n                        >\n                            <button\n                                class=\"selector__counter-minus\"\n                                type=\"button\"\n                            >\n                                <span>-</span>\n                            </button>\n                            <input\n                                type=\"text\"\n                                class=\"selector__counter-number\"\n                                min=\"1\"\n                                maxlength=\"3\"\n                                value=").concat(item.quantityStart, "\n                                onkeypress=\"return event.charCode >= 48 && event.charCode <= 57\"\n                            />\n                            <button\n                                class=\"selector__counter-plus\"\n                                type=\"button\"\n                            >\n                                <span>+</span>\n                            </button>\n                        </div>\n                        <div\n                            class=\"product__card__quantity-goods__icons control-buttons\"\n                        >\n                            <button\n                                class=\"control-buttons__favorite\"\n                                type=\"button\"\n                            ></button>\n                            <button\n                                class=\"control-buttons__delete\"\n                                type=\"button\"\n                            ></button>\n                        </div>\n                    </div>\n                    <div class=\"product__card__price\">\n                        <div\n                            class=\"product__card__price__with-discount\"\n                        >\n                            <p class=\"product__card__value\">\n                            2 300 041\n                            </p>\n                            <span\n                                class=\"product__card__currency\"\n                                >\u0441\u043E\u043C</span\n                            >\n                        </div>\n                        <button\n                            type=\"button\"\n                            class=\"product__card__price-full discount\"\n                        >\n                            <span\n                                class=\"discount__value tooltip__trigger\"\n                            >\n                                ").concat(item.price, " \u0441\u043E\u043C\n                            </span>\n                            <div\n                                class=\"tooltip tooltip__info-price\"\n                            >\n                                <div\n                                    class=\"tooltip__info-price__disc-shop\"\n                                >\n                                    <span\n                                        class=\"tooltip__disc\"\n                                        >\u0421\u043A\u0438\u0434\u043A\u0430 55%</span\n                                    >\n                                    <span\n                                        class=\"tooltip__value\"\n                                        >\u2212300 \u0441\u043E\u043C</span\n                                    >\n                                </div>\n                                <div\n                                    class=\"tooltip__info-price__disc-personal\"\n                                >\n                                    <span\n                                        class=\"tooltip__disc\"\n                                        >\u0421\u043A\u0438\u0434\u043A\u0430 \u043F\u043E\u043A\u0443\u043F\u0430\u0442\u0435\u043B\u044F\n                                        10%</span\n                                    >\n                                    <span\n                                        class=\"tooltip__value\"\n                                        >\u221230 \u0441\u043E\u043C</span\n                                    >\n                                </div>\n                            </div>\n                        </button>\n                    </div>\n                </div>\n            ");
+      card.innerHTML = "\n                <div class=\"item-".concat(item.id, "__details\">\n                    <button\n                        class=\"checkbox product-card\"\n                        type=\"button\"\n                    ></button>\n                    <div class=\"item-").concat(item.id, "__details__img\">\n                        <img\n                            src=").concat(item.img, "\n                            alt=\"\u0418\u0437\u043E\u0431\u0440\u0430\u0436\u0435\u043D\u0438\u0435 \u0442\u043E\u0432\u0430\u0440\u0430 \u0444\u0443\u0442\u0431\u043E\u043B\u043A\u0430\"\n                        />\n                    </div>\n                    <div class=\"product__card__info\">\n                        <h6 class=\"product__card__title\">\n                            ").concat(item.title, "\n                        </h6>\n                        <div\n                            class=\"product__card__description\"\n                        >\n                            <p\n                                class=\"product__card__description-text\"\n                            >\n                                ").concat(item.description.color, "\n                            </p>\n                        </div>\n                        <p class=\"product__card__location\">\n                            ").concat(item.location, "\n                        </p>\n                        <div\n                            class=\"product__card__legal-entity\"\n                        >\n                            <p\n                                class=\"product__card__legal-entity-name\"\n                            >\n                                ").concat(item.legalEntity, "\n                            </p>\n                            <button\n                                class=\"info tooltip__trigger\"\n                                type=\"button\"\n                            >\n                                <div class=\"tooltip\">\n                                    <span\n                                        class=\"tooltip__title\"\n                                    >\n                                        ").concat(item.tooltip.tooltipTitle, "\n                                    </span>\n                                    <span\n                                        class=\"tooltip__text\"\n                                    >\n                                        ").concat(item.tooltip.tooltipText, "\n                                    </span>\n                                    <span\n                                        class=\"tooltip__text\"\n                                    >\n                                        ").concat(item.tooltip.tooltipAdress, "\n                                    </span>\n                                </div>\n                            </button>\n                        </div>\n                    </div>\n                    <div\n                        class=\"product__card__quantity-goods\"\n                    >\n                        <div\n                            class=\"product__card__quantity-goods__selector selector__counter\"\n                        >\n                            <button\n                                class=\"selector__counter-minus\"\n                                type=\"button\"\n                            >\n                                <span>-</span>\n                            </button>\n                            <input\n                                type=\"text\"\n                                class=\"selector__counter-number\"\n                                min=\"1\"\n                                maxlength=\"3\"\n                                value=").concat(item.quantityStart, "\n                                onkeypress=\"return event.charCode >= 48 && event.charCode <= 57\"\n                            />\n                            <button\n                                class=\"selector__counter-plus\"\n                                type=\"button\"\n                            >\n                                <span>+</span>\n                            </button>\n                        </div>\n                        <div\n                            class=\"product__card__quantity-goods__icons control-buttons\"\n                        >\n                            <button\n                                class=\"control-buttons__favorite\"\n                                type=\"button\"\n                            ></button>\n                            <button\n                                class=\"control-buttons__delete\"\n                                type=\"button\"\n                            ></button>\n                        </div>\n                    </div>\n                    <div class=\"product__card__price\">\n                        <div\n                            class=\"product__card__price__with-discount\"\n                        >\n                            <p class=\"product__card__value\">\n                            ").concat(item.priceDiscount, "\n                            </p>\n                            <span\n                                class=\"product__card__currency\"\n                                >\u0441\u043E\u043C</span\n                            >\n                        </div>\n                        <button\n                            type=\"button\"\n                            class=\"product__card__price-full discount\"\n                        >\n                            <span\n                                class=\"discount__value tooltip__trigger\"\n                            >\n                                ").concat(item.price, " \u0441\u043E\u043C\n                            </span>\n                            <div\n                                class=\"tooltip tooltip__info-price\"\n                            >\n                                <div\n                                    class=\"tooltip__info-price__disc-shop\"\n                                >\n                                    <span\n                                        class=\"tooltip__disc\"\n                                        >\u0421\u043A\u0438\u0434\u043A\u0430 55%</span\n                                    >\n                                    <span\n                                        class=\"tooltip__value\"\n                                        >").concat(item.discount.valueShop, "</span\n                                    >\n                                </div>\n                                <div\n                                    class=\"tooltip__info-price__disc-personal\"\n                                >\n                                    <span\n                                        class=\"tooltip__disc\"\n                                        >\u0421\u043A\u0438\u0434\u043A\u0430 \u043F\u043E\u043A\u0443\u043F\u0430\u0442\u0435\u043B\u044F\n                                        10%</span\n                                    >\n                                    <span\n                                        class=\"tooltip__value\"\n                                        >").concat(item.discount.valuePers, "</span\n                                    >\n                                </div>\n                            </div>\n                        </button>\n                    </div>\n                </div>\n            ");
     } else {
       card.classList.add("product__card", "item-".concat(item.id));
-      card.innerHTML = "\n                <div class=\"item-".concat(item.id, "__details\">\n                    <button\n                        class=\"checkbox product-card\"\n                        type=\"button\"\n                    ></button>\n                    <div class=\"item-").concat(item.id, "__details__img\">\n                        <img\n                            src=").concat(item.img, "\n                            alt=\"\u0418\u0437\u043E\u0431\u0440\u0430\u0436\u0435\u043D\u0438\u0435 \u0442\u043E\u0432\u0430\u0440\u0430 \u0444\u0443\u0442\u0431\u043E\u043B\u043A\u0430\"\n                        />\n                    </div>\n                    <div class=\"product__card__info\">\n                        <h6 class=\"product__card__title\">\n                            ").concat(item.title, "\n                        </h6>\n                        <p class=\"product__card__location\">\n                            ").concat(item.location, "\n                        </p>\n                        <div\n                            class=\"product__card__legal-entity\"\n                        >\n                            <p\n                                class=\"product__card__legal-entity-name\"\n                            >\n                                ").concat(item.legalEntity, "\n                            </p>\n                            <button\n                                class=\"info tooltip__trigger\"\n                                type=\"button\"\n                            >\n                                <div class=\"tooltip\">\n                                    <span\n                                        class=\"tooltip__title\"\n                                    >\n                                        ").concat(item.tooltip.tooltipTitle, "\n                                    </span>\n                                    <span\n                                        class=\"tooltip__text\"\n                                    >\n                                        ").concat(item.tooltip.tooltipText, "\n                                    </span>\n                                    <span\n                                        class=\"tooltip__text\"\n                                    >\n                                        ").concat(item.tooltip.tooltipAdress, "\n                                    </span>\n                                </div>\n                            </button>\n                        </div>\n                    </div>\n                    <div\n                        class=\"product__card__quantity-goods\"\n                    >\n                        <div\n                            class=\"product__card__quantity-goods__selector selector__counter\"\n                        >\n                            <button\n                                class=\"selector__counter-minus\"\n                                type=\"button\"\n                            >\n                                <span>-</span>\n                            </button>\n                            <input\n                                type=\"text\"\n                                class=\"selector__counter-number\"\n                                min=\"1\"\n                                maxlength=\"3\"\n                                value=").concat(item.quantityStart, "\n                                onkeypress=\"return event.charCode >= 48 && event.charCode <= 57\"\n                            />\n                            <button\n                                class=\"selector__counter-plus disabled\"\n                                type=\"button\"\n                                disabled\n                            >\n                                <span>+</span>\n                            </button>\n                        </div>\n                        <span\n                            class=\"product__card__quantity-goods__text-caption\"\n                        >   \n                            \u041E\u0441\u0442\u0430\u043B\u043E\u0441\u044C ").concat(item.remainingGoods, " \u0448\u0442.\n                        </span>\n                        <div\n                            class=\"product__card__quantity-goods__icons control-buttons\"\n                        >\n                            <button\n                                class=\"control-buttons__favorite\"\n                                type=\"button\"\n                            ></button>\n                            <button\n                                class=\"control-buttons__delete\"\n                                type=\"button\"\n                            ></button>\n                        </div>\n                    </div>\n                    <div class=\"product__card__price\">\n                        <div\n                            class=\"product__card__price__with-discount\"\n                        >\n                            <p class=\"product__card__value\">\n                            ").concat(item.priceDiscount, "\n                            </p>\n                            <span\n                                class=\"product__card__currency\"\n                                >\u0441\u043E\u043C</span\n                            >\n                        </div>\n                        <button\n                            type=\"button\"\n                            class=\"product__card__price-full discount\"\n                        >\n                            <span\n                                class=\"discount__value tooltip__trigger\"\n                            >\n                                ").concat(item.price, " \u0441\u043E\u043C\n                            </span>\n                            <div\n                                class=\"tooltip tooltip__info-price\"\n                            >\n                                <div\n                                    class=\"tooltip__info-price__disc-shop\"\n                                >\n                                    <span\n                                        class=\"tooltip__disc\"\n                                        >\u0421\u043A\u0438\u0434\u043A\u0430 55%</span\n                                    >\n                                    <span\n                                        class=\"tooltip__value\"\n                                        >\u2212300 \u0441\u043E\u043C</span\n                                    >\n                                </div>\n                                <div\n                                    class=\"tooltip__info-price__disc-personal\"\n                                >\n                                    <span\n                                        class=\"tooltip__disc\"\n                                        >\u0421\u043A\u0438\u0434\u043A\u0430 \u043F\u043E\u043A\u0443\u043F\u0430\u0442\u0435\u043B\u044F\n                                        10%</span\n                                    >\n                                    <span\n                                        class=\"tooltip__value\"\n                                        >\u221230 \u0441\u043E\u043C</span\n                                    >\n                                </div>\n                            </div>\n                        </button>\n                    </div>\n                </div>\n            ");
+      card.innerHTML = "\n                <div class=\"item-".concat(item.id, "__details\">\n                    <button\n                        class=\"checkbox product-card\"\n                        type=\"button\"\n                    ></button>\n                    <div class=\"item-").concat(item.id, "__details__img\">\n                        <img\n                            src=").concat(item.img, "\n                            alt=\"\u0418\u0437\u043E\u0431\u0440\u0430\u0436\u0435\u043D\u0438\u0435 \u0442\u043E\u0432\u0430\u0440\u0430 \u0444\u0443\u0442\u0431\u043E\u043B\u043A\u0430\"\n                        />\n                    </div>\n                    <div class=\"product__card__info\">\n                        <h6 class=\"product__card__title\">\n                            ").concat(item.title, "\n                        </h6>\n                        <p class=\"product__card__location\">\n                            ").concat(item.location, "\n                        </p>\n                        <div\n                            class=\"product__card__legal-entity\"\n                        >\n                            <p\n                                class=\"product__card__legal-entity-name\"\n                            >\n                                ").concat(item.legalEntity, "\n                            </p>\n                            <button\n                                class=\"info tooltip__trigger\"\n                                type=\"button\"\n                            >\n                                <div class=\"tooltip\">\n                                    <span\n                                        class=\"tooltip__title\"\n                                    >\n                                        ").concat(item.tooltip.tooltipTitle, "\n                                    </span>\n                                    <span\n                                        class=\"tooltip__text\"\n                                    >\n                                        ").concat(item.tooltip.tooltipText, "\n                                    </span>\n                                    <span\n                                        class=\"tooltip__text\"\n                                    >\n                                        ").concat(item.tooltip.tooltipAdress, "\n                                    </span>\n                                </div>\n                            </button>\n                        </div>\n                    </div>\n                    <div\n                        class=\"product__card__quantity-goods\"\n                    >\n                        <div\n                            class=\"product__card__quantity-goods__selector selector__counter\"\n                        >\n                            <button\n                                class=\"selector__counter-minus\"\n                                type=\"button\"\n                            >\n                                <span>-</span>\n                            </button>\n                            <input\n                                type=\"text\"\n                                class=\"selector__counter-number\"\n                                min=\"1\"\n                                maxlength=\"3\"\n                                value=").concat(item.quantityStart, "\n                                onkeypress=\"return event.charCode >= 48 && event.charCode <= 57\"\n                            />\n                            <button\n                                class=\"selector__counter-plus disabled\"\n                                type=\"button\"\n                                disabled\n                            >\n                                <span>+</span>\n                            </button>\n                        </div>\n                        <span\n                            class=\"product__card__quantity-goods__text-caption\"\n                        >   \n                            \u041E\u0441\u0442\u0430\u043B\u043E\u0441\u044C ").concat(item.remainingGoods, " \u0448\u0442.\n                        </span>\n                        <div\n                            class=\"product__card__quantity-goods__icons control-buttons\"\n                        >\n                            <button\n                                class=\"control-buttons__favorite\"\n                                type=\"button\"\n                            ></button>\n                            <button\n                                class=\"control-buttons__delete\"\n                                type=\"button\"\n                            ></button>\n                        </div>\n                    </div>\n                    <div class=\"product__card__price\">\n                        <div\n                            class=\"product__card__price__with-discount\"\n                        >\n                            <p class=\"product__card__value\">\n                            ").concat(item.priceDiscount, "\n                            </p>\n                            <span\n                                class=\"product__card__currency\"\n                                >\u0441\u043E\u043C</span\n                            >\n                        </div>\n                        <button\n                            type=\"button\"\n                            class=\"product__card__price-full discount\"\n                        >\n                            <span\n                                class=\"discount__value tooltip__trigger\"\n                            >\n                                ").concat(item.price, " \u0441\u043E\u043C\n                            </span>\n                            <div\n                                class=\"tooltip tooltip__info-price\"\n                            >\n                                <div\n                                    class=\"tooltip__info-price__disc-shop\"\n                                >\n                                    <span\n                                        class=\"tooltip__disc\"\n                                        >\u0421\u043A\u0438\u0434\u043A\u0430 55%</span\n                                    >\n                                    <span\n                                        class=\"tooltip__value\"\n                                        >").concat(item.discount.valueShop, "</span\n                                    >\n                                </div>\n                                <div\n                                    class=\"tooltip__info-price__disc-personal\"\n                                >\n                                    <span\n                                        class=\"tooltip__disc\"\n                                        >\u0421\u043A\u0438\u0434\u043A\u0430 \u043F\u043E\u043A\u0443\u043F\u0430\u0442\u0435\u043B\u044F\n                                        10%</span\n                                    >\n                                    <span\n                                        class=\"tooltip__value\"\n                                        >").concat(item.discount.valuePers, "</span\n                                    >\n                                </div>\n                            </div>\n                        </button>\n                    </div>\n                </div>\n            ");
     }
     document.querySelector('.product__card__wrapper').appendChild(card);
   });
@@ -730,6 +699,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
 /* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_esnext_string_replace_all_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/esnext.string.replace-all.js */ "./node_modules/core-js/modules/esnext.string.replace-all.js");
+/* harmony import */ var core_js_modules_esnext_string_replace_all_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_esnext_string_replace_all_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _formatValue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./formatValue */ "./src/js/modules/formatValue.js");
+
+
+
+
 
 
 var chooseGoods = function chooseGoods() {
@@ -832,23 +812,26 @@ var chooseGoods = function chooseGoods() {
     });
     productShow(sum);
     deliveryShow(sum);
+    orderValueShow();
   }
 
   //Функция отображения кол-ва товара в оформлении заказа
   function productShow(value) {
     var number = document.querySelector('.item-2__details .selector__counter-number'),
       checkboxCardTwo = document.querySelectorAll('.checkbox.product-card')[1];
-    if (+number.value > 184 && window.innerWidth > 994 && checkboxCardTwo.classList.contains('checkbox_active')) {
-      document.querySelector('.delivery-location__adress').style.marginBottom = '4px';
-      document.querySelector('.delivery-location__date').style.display = 'block';
-      document.querySelector('.delivery-location__date').textContent = "5-8 \u0444\u0435\u0432";
-    } else if (value !== 0 && window.innerWidth > 994) {
-      document.querySelector('.delivery-location__adress').style.marginBottom = '4px';
-      document.querySelector('.delivery-location__date').style.display = 'block';
-      document.querySelector('.delivery-location__date').textContent = "5-6 \u0444\u0435\u0432";
-    } else {
-      document.querySelector('.delivery-location__adress').style.marginBottom = '32px';
-      document.querySelector('.delivery-location__date').style.display = 'none';
+    if (number !== undefined) {
+      if (parseInt(number.value) > 184 && window.innerWidth > 994 && checkboxCardTwo.classList.contains('checkbox_active')) {
+        document.querySelector('.delivery-location__adress').style.marginBottom = '4px';
+        document.querySelector('.delivery-location__date').style.display = 'block';
+        document.querySelector('.delivery-location__date').textContent = "5-8 \u0444\u0435\u0432";
+      } else if (value !== 0 && window.innerWidth > 994) {
+        document.querySelector('.delivery-location__adress').style.marginBottom = '4px';
+        document.querySelector('.delivery-location__date').style.display = 'block';
+        document.querySelector('.delivery-location__date').textContent = "5-6 \u0444\u0435\u0432";
+      } else {
+        document.querySelector('.delivery-location__adress').style.marginBottom = '32px';
+        document.querySelector('.delivery-location__date').style.display = 'none';
+      }
     }
     var first = value % 100,
       second = first % 10;
@@ -868,7 +851,7 @@ var chooseGoods = function chooseGoods() {
     document.querySelector('.value').textContent = "".concat(value);
   }
 
-  //Функиця отображения кол-ва карточек товара и дату доставки
+  //Функиция отображения кол-ва карточек товара и дату доставки
   function deliveryShow(value) {
     var basketValue = document.querySelector('.navbar-pc__notify'),
       basketMobileValue = document.querySelector('.mobile-navbar__notify'),
@@ -901,7 +884,8 @@ var chooseGoods = function chooseGoods() {
     //Отображение товара на дату (5-6 фев)
     var checkboxAll = document.querySelectorAll('.checkbox.product-card.checkbox_active'),
       checkboxActive = document.querySelectorAll('.checkbox.product-card'),
-      productCards = document.querySelectorAll('#delivery_product > div');
+      productCards = document.querySelectorAll('#delivery_product > div'),
+      countProduct = document.querySelectorAll('.selector__counter-number');
     if (checkboxAll.length === 0) {
       document.querySelectorAll('.delivery__info.data-delivery')[0].style.display = 'none';
     } else {
@@ -914,20 +898,82 @@ var chooseGoods = function chooseGoods() {
         document.querySelector(".product-card__photo-".concat(index + 1)).style.display = 'none';
       }
     });
-    productCards.forEach(function (item, index) {
-      if (parseInt(document.querySelectorAll('.selector__counter-number')[index].value) > 1 && index !== 1) {
-        item.querySelector('.product-card__counter').textContent = "".concat(document.querySelectorAll('.selector__counter-number')[index].value);
-        item.querySelector('.product-card__counter').style.display = 'flex';
-      } else if (parseInt(document.querySelectorAll('.selector__counter-number')[index].value) > 1 && parseInt(document.querySelectorAll('.selector__counter-number')[index].value) <= 184) {
-        item.querySelector('.product-card__counter').textContent = "".concat(document.querySelectorAll('.selector__counter-number')[1].value);
-        item.querySelector('.product-card__counter').style.display = 'flex';
-      } else if (parseInt(document.querySelectorAll('.selector__counter-number')[index].value) > 184) {
-        item.querySelector('.product-card__counter').textContent = "184";
-        item.querySelector('.product-card__counter').style.display = 'flex';
+    if (productCards.length > 1) {
+      productCards.forEach(function (item, index) {
+        if (parseInt(countProduct[index].value) > 1 && index !== 1) {
+          item.querySelector('.product-card__counter').textContent = "".concat(countProduct[index].value);
+          item.querySelector('.product-card__counter').style.display = 'flex';
+        } else if (parseInt(countProduct[index].value) > 1 && parseInt(countProduct[index].value) <= 184) {
+          item.querySelector('.product-card__counter').textContent = "".concat(countProduct[1].value);
+          item.querySelector('.product-card__counter').style.display = 'flex';
+        } else if (parseInt(countProduct[index].value) > 184) {
+          item.querySelector('.product-card__counter').textContent = "184";
+          item.querySelector('.product-card__counter').style.display = 'flex';
+        } else {
+          item.querySelector('.product-card__counter').style.display = 'none';
+        }
+      });
+    } else {
+      productCards.querySelector('.product-card__counter').style.display = 'none';
+    }
+  }
+
+  //Функция работы с ценой товара и скидкой
+  function orderValueShow() {
+    var countProducts = document.querySelectorAll('.selector__counter-number'),
+      priceProducts = document.querySelectorAll('.product__card__value'),
+      discProducts = document.querySelectorAll('.discount__value'),
+      orderPriceAll = document.querySelector('.main__total-price__value .price__value'),
+      priceCards = document.querySelector('.card-1__text.card-1__text__close'),
+      orderDiscAll = document.querySelector('.quantity-goods__price.price'),
+      minusDiscAll = document.querySelector('.discount__price.price'),
+      submitBtn = document.querySelector('.main__total-price__order-btn'),
+      checkboxPayMethod = document.querySelector('.checkbox.select-paymethod');
+    countProducts.forEach(function (value, index) {
+      if (index === 0) {
+        priceProducts[index].textContent = "".concat(parseInt(value.value * 368));
+        discProducts[index].textContent = "".concat(parseInt(value.value * 1051), " \u0441\u043E\u043C");
+      } else if (index === 1) {
+        priceProducts[index].textContent = "".concat((0,_formatValue__WEBPACK_IMPORTED_MODULE_5__["default"])(parseInt(value.value * 4025)));
+        discProducts[index].textContent = "".concat((0,_formatValue__WEBPACK_IMPORTED_MODULE_5__["default"])(parseInt(value.value * 11500)), " \u0441\u043E\u043C");
       } else {
-        item.querySelector('.product-card__counter').style.display = 'none';
+        priceProducts[index].textContent = "".concat(parseInt(value.value * 167));
+        discProducts[index].textContent = "".concat(parseInt(value.value * 475), " \u0441\u043E\u043C");
       }
     });
+
+    //Отображение общей цены 
+    var sumProducts = 0;
+    priceProducts.forEach(function (price, index) {
+      if (document.querySelector(".item-".concat(index + 1, "__details")).querySelector('.checkbox.product-card.checkbox_active')) {
+        sumProducts += parseInt(price.textContent.replaceAll(' ', ''));
+      } else {
+        sumProducts += 0;
+      }
+    });
+    orderPriceAll.textContent = "".concat((0,_formatValue__WEBPACK_IMPORTED_MODULE_5__["default"])(sumProducts));
+    priceCards.children[1].textContent = "".concat((0,_formatValue__WEBPACK_IMPORTED_MODULE_5__["default"])(sumProducts), " \u0441\u043E\u043C");
+
+    //Отображение общей скидки
+    var sumDisc = 0;
+    discProducts.forEach(function (discount, index) {
+      if (document.querySelector(".item-".concat(index + 1, "__details")).querySelector('.checkbox.product-card.checkbox_active')) {
+        sumDisc += parseInt(discount.textContent.replaceAll(' ', ''));
+      } else {
+        sumDisc += 0;
+      }
+    });
+    orderDiscAll.children[0].textContent = "".concat((0,_formatValue__WEBPACK_IMPORTED_MODULE_5__["default"])(sumDisc));
+    if (sumProducts - sumDisc !== 0) {
+      minusDiscAll.children[0].textContent = "\u2212".concat((0,_formatValue__WEBPACK_IMPORTED_MODULE_5__["default"])(sumDisc - sumProducts));
+    } else {
+      minusDiscAll.children[0].textContent = "0";
+    }
+
+    //Если активна кнопка оплаты по карте
+    if (checkboxPayMethod.classList.contains('checkbox_active')) {
+      submitBtn.textContent = "\u041E\u043F\u043B\u0430\u0442\u0438\u0442\u044C ".concat((0,_formatValue__WEBPACK_IMPORTED_MODULE_5__["default"])(orderPriceAll.textContent), " \u0441\u043E\u043C");
+    }
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = (chooseGoods);
@@ -970,37 +1016,6 @@ var $TypeError = TypeError;
 module.exports = function (argument) {
   if (typeof argument == 'object' || isCallable(argument)) return argument;
   throw new $TypeError("Can't set " + $String(argument) + ' as a prototype');
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/internals/add-to-unscopables.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/core-js/internals/add-to-unscopables.js ***!
-  \**************************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
-
-
-var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js");
-var create = __webpack_require__(/*! ../internals/object-create */ "./node_modules/core-js/internals/object-create.js");
-var defineProperty = (__webpack_require__(/*! ../internals/object-define-property */ "./node_modules/core-js/internals/object-define-property.js").f);
-
-var UNSCOPABLES = wellKnownSymbol('unscopables');
-var ArrayPrototype = Array.prototype;
-
-// Array.prototype[@@unscopables]
-// https://tc39.es/ecma262/#sec-array.prototype-@@unscopables
-if (ArrayPrototype[UNSCOPABLES] === undefined) {
-  defineProperty(ArrayPrototype, UNSCOPABLES, {
-    configurable: true,
-    value: create(null)
-  });
-}
-
-// add a key to Array.prototype[@@unscopables]
-module.exports = function (key) {
-  ArrayPrototype[UNSCOPABLES][key] = true;
 };
 
 
@@ -1642,30 +1657,6 @@ module.exports = function (object, key, value) {
   var propertyKey = toPropertyKey(key);
   if (propertyKey in object) definePropertyModule.f(object, propertyKey, createPropertyDescriptor(0, value));
   else object[propertyKey] = value;
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/internals/date-to-primitive.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/core-js/internals/date-to-primitive.js ***!
-  \*************************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
-
-
-var anObject = __webpack_require__(/*! ../internals/an-object */ "./node_modules/core-js/internals/an-object.js");
-var ordinaryToPrimitive = __webpack_require__(/*! ../internals/ordinary-to-primitive */ "./node_modules/core-js/internals/ordinary-to-primitive.js");
-
-var $TypeError = TypeError;
-
-// `Date.prototype[@@toPrimitive](hint)` method implementation
-// https://tc39.es/ecma262/#sec-date.prototype-@@toprimitive
-module.exports = function (hint) {
-  anObject(this);
-  if (hint === 'string' || hint === 'default') hint = 'string';
-  else if (hint !== 'number') throw new $TypeError('Incorrect hint');
-  return ordinaryToPrimitive(this, hint);
 };
 
 
@@ -2612,35 +2603,6 @@ module.exports = fails(function () {
 
 /***/ }),
 
-/***/ "./node_modules/core-js/internals/inherit-if-required.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/core-js/internals/inherit-if-required.js ***!
-  \***************************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
-
-
-var isCallable = __webpack_require__(/*! ../internals/is-callable */ "./node_modules/core-js/internals/is-callable.js");
-var isObject = __webpack_require__(/*! ../internals/is-object */ "./node_modules/core-js/internals/is-object.js");
-var setPrototypeOf = __webpack_require__(/*! ../internals/object-set-prototype-of */ "./node_modules/core-js/internals/object-set-prototype-of.js");
-
-// makes subclassing work correct for wrapped built-ins
-module.exports = function ($this, dummy, Wrapper) {
-  var NewTarget, NewTargetPrototype;
-  if (
-    // it can work only with native `setPrototypeOf`
-    setPrototypeOf &&
-    // we haven't completely correct pre-ES6 way for getting `new.target`, so use this
-    isCallable(NewTarget = dummy.constructor) &&
-    NewTarget !== Wrapper &&
-    isObject(NewTargetPrototype = NewTarget.prototype) &&
-    NewTargetPrototype !== Wrapper.prototype
-  ) setPrototypeOf($this, NewTargetPrototype);
-  return $this;
-};
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/internals/inspect-source.js":
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/internals/inspect-source.js ***!
@@ -2950,6 +2912,29 @@ module.exports = $documentAll.IS_HTMLDDA ? function (it) {
 
 
 module.exports = false;
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/is-regexp.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/core-js/internals/is-regexp.js ***!
+  \*****************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+
+var isObject = __webpack_require__(/*! ../internals/is-object */ "./node_modules/core-js/internals/is-object.js");
+var classof = __webpack_require__(/*! ../internals/classof-raw */ "./node_modules/core-js/internals/classof-raw.js");
+var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js");
+
+var MATCH = wellKnownSymbol('match');
+
+// `IsRegExp` abstract operation
+// https://tc39.es/ecma262/#sec-isregexp
+module.exports = function (it) {
+  var isRegExp;
+  return isObject(it) && ((isRegExp = it[MATCH]) !== undefined ? !!isRegExp : classof(it) === 'RegExp');
+};
 
 
 /***/ }),
@@ -4292,47 +4277,6 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/core-js/internals/string-trim.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/core-js/internals/string-trim.js ***!
-  \*******************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
-
-
-var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ "./node_modules/core-js/internals/function-uncurry-this.js");
-var requireObjectCoercible = __webpack_require__(/*! ../internals/require-object-coercible */ "./node_modules/core-js/internals/require-object-coercible.js");
-var toString = __webpack_require__(/*! ../internals/to-string */ "./node_modules/core-js/internals/to-string.js");
-var whitespaces = __webpack_require__(/*! ../internals/whitespaces */ "./node_modules/core-js/internals/whitespaces.js");
-
-var replace = uncurryThis(''.replace);
-var ltrim = RegExp('^[' + whitespaces + ']+');
-var rtrim = RegExp('(^|[^' + whitespaces + '])[' + whitespaces + ']+$');
-
-// `String.prototype.{ trim, trimStart, trimEnd, trimLeft, trimRight }` methods implementation
-var createMethod = function (TYPE) {
-  return function ($this) {
-    var string = toString(requireObjectCoercible($this));
-    if (TYPE & 1) string = replace(string, ltrim, '');
-    if (TYPE & 2) string = replace(string, rtrim, '$1');
-    return string;
-  };
-};
-
-module.exports = {
-  // `String.prototype.{ trimLeft, trimStart }` methods
-  // https://tc39.es/ecma262/#sec-string.prototype.trimstart
-  start: createMethod(1),
-  // `String.prototype.{ trimRight, trimEnd }` methods
-  // https://tc39.es/ecma262/#sec-string.prototype.trimend
-  end: createMethod(2),
-  // `String.prototype.trim` method
-  // https://tc39.es/ecma262/#sec-string.prototype.trim
-  trim: createMethod(3)
-};
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/internals/symbol-constructor-detection.js":
 /*!************************************************************************!*\
   !*** ./node_modules/core-js/internals/symbol-constructor-detection.js ***!
@@ -4404,22 +4348,6 @@ var NATIVE_SYMBOL = __webpack_require__(/*! ../internals/symbol-constructor-dete
 
 /* eslint-disable es/no-symbol -- safe */
 module.exports = NATIVE_SYMBOL && !!Symbol['for'] && !!Symbol.keyFor;
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/internals/this-number-value.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/core-js/internals/this-number-value.js ***!
-  \*************************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
-
-
-var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ "./node_modules/core-js/internals/function-uncurry-this.js");
-
-// `thisNumberValue` abstract operation
-// https://tc39.es/ecma262/#sec-thisnumbervalue
-module.exports = uncurryThis(1.0.valueOf);
 
 
 /***/ }),
@@ -4781,20 +4709,6 @@ module.exports = function (name) {
 
 /***/ }),
 
-/***/ "./node_modules/core-js/internals/whitespaces.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/core-js/internals/whitespaces.js ***!
-  \*******************************************************/
-/***/ (function(module) {
-
-
-// a string of all valid unicode whitespaces
-module.exports = '\u0009\u000A\u000B\u000C\u000D\u0020\u00A0\u1680\u2000\u2001\u2002' +
-  '\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF';
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/modules/es.array.concat.js":
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es.array.concat.js ***!
@@ -4888,78 +4802,6 @@ $({ target: 'Array', stat: true, forced: INCORRECT_ITERATION }, {
 
 /***/ }),
 
-/***/ "./node_modules/core-js/modules/es.array.iterator.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/core-js/modules/es.array.iterator.js ***!
-  \***********************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
-
-
-var toIndexedObject = __webpack_require__(/*! ../internals/to-indexed-object */ "./node_modules/core-js/internals/to-indexed-object.js");
-var addToUnscopables = __webpack_require__(/*! ../internals/add-to-unscopables */ "./node_modules/core-js/internals/add-to-unscopables.js");
-var Iterators = __webpack_require__(/*! ../internals/iterators */ "./node_modules/core-js/internals/iterators.js");
-var InternalStateModule = __webpack_require__(/*! ../internals/internal-state */ "./node_modules/core-js/internals/internal-state.js");
-var defineProperty = (__webpack_require__(/*! ../internals/object-define-property */ "./node_modules/core-js/internals/object-define-property.js").f);
-var defineIterator = __webpack_require__(/*! ../internals/iterator-define */ "./node_modules/core-js/internals/iterator-define.js");
-var createIterResultObject = __webpack_require__(/*! ../internals/create-iter-result-object */ "./node_modules/core-js/internals/create-iter-result-object.js");
-var IS_PURE = __webpack_require__(/*! ../internals/is-pure */ "./node_modules/core-js/internals/is-pure.js");
-var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "./node_modules/core-js/internals/descriptors.js");
-
-var ARRAY_ITERATOR = 'Array Iterator';
-var setInternalState = InternalStateModule.set;
-var getInternalState = InternalStateModule.getterFor(ARRAY_ITERATOR);
-
-// `Array.prototype.entries` method
-// https://tc39.es/ecma262/#sec-array.prototype.entries
-// `Array.prototype.keys` method
-// https://tc39.es/ecma262/#sec-array.prototype.keys
-// `Array.prototype.values` method
-// https://tc39.es/ecma262/#sec-array.prototype.values
-// `Array.prototype[@@iterator]` method
-// https://tc39.es/ecma262/#sec-array.prototype-@@iterator
-// `CreateArrayIterator` internal method
-// https://tc39.es/ecma262/#sec-createarrayiterator
-module.exports = defineIterator(Array, 'Array', function (iterated, kind) {
-  setInternalState(this, {
-    type: ARRAY_ITERATOR,
-    target: toIndexedObject(iterated), // target
-    index: 0,                          // next index
-    kind: kind                         // kind
-  });
-// `%ArrayIteratorPrototype%.next` method
-// https://tc39.es/ecma262/#sec-%arrayiteratorprototype%.next
-}, function () {
-  var state = getInternalState(this);
-  var target = state.target;
-  var index = state.index++;
-  if (!target || index >= target.length) {
-    state.target = undefined;
-    return createIterResultObject(undefined, true);
-  }
-  switch (state.kind) {
-    case 'keys': return createIterResultObject(index, false);
-    case 'values': return createIterResultObject(target[index], false);
-  } return createIterResultObject([index, target[index]], false);
-}, 'values');
-
-// argumentsList[@@iterator] is %ArrayProto_values%
-// https://tc39.es/ecma262/#sec-createunmappedargumentsobject
-// https://tc39.es/ecma262/#sec-createmappedargumentsobject
-var values = Iterators.Arguments = Iterators.Array;
-
-// https://tc39.es/ecma262/#sec-array.prototype-@@unscopables
-addToUnscopables('keys');
-addToUnscopables('values');
-addToUnscopables('entries');
-
-// V8 ~ Chrome 45- bug
-if (!IS_PURE && DESCRIPTORS && values.name !== 'values') try {
-  defineProperty(values, 'name', { value: 'values' });
-} catch (error) { /* empty */ }
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/modules/es.array.map.js":
 /*!******************************************************!*\
   !*** ./node_modules/core-js/modules/es.array.map.js ***!
@@ -4981,30 +4823,6 @@ $({ target: 'Array', proto: true, forced: !HAS_SPECIES_SUPPORT }, {
     return $map(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
   }
 });
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/modules/es.date.to-primitive.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/core-js/modules/es.date.to-primitive.js ***!
-  \**************************************************************/
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
-
-
-var hasOwn = __webpack_require__(/*! ../internals/has-own-property */ "./node_modules/core-js/internals/has-own-property.js");
-var defineBuiltIn = __webpack_require__(/*! ../internals/define-built-in */ "./node_modules/core-js/internals/define-built-in.js");
-var dateToPrimitive = __webpack_require__(/*! ../internals/date-to-primitive */ "./node_modules/core-js/internals/date-to-primitive.js");
-var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js");
-
-var TO_PRIMITIVE = wellKnownSymbol('toPrimitive');
-var DatePrototype = Date.prototype;
-
-// `Date.prototype[@@toPrimitive]` method
-// https://tc39.es/ecma262/#sec-date.prototype-@@toprimitive
-if (!hasOwn(DatePrototype, TO_PRIMITIVE)) {
-  defineBuiltIn(DatePrototype, TO_PRIMITIVE, dateToPrimitive);
-}
 
 
 /***/ }),
@@ -5124,131 +4942,6 @@ if ($stringify) {
     }
   });
 }
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/modules/es.number.constructor.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/core-js/modules/es.number.constructor.js ***!
-  \***************************************************************/
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
-
-
-var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
-var IS_PURE = __webpack_require__(/*! ../internals/is-pure */ "./node_modules/core-js/internals/is-pure.js");
-var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "./node_modules/core-js/internals/descriptors.js");
-var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
-var path = __webpack_require__(/*! ../internals/path */ "./node_modules/core-js/internals/path.js");
-var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ "./node_modules/core-js/internals/function-uncurry-this.js");
-var isForced = __webpack_require__(/*! ../internals/is-forced */ "./node_modules/core-js/internals/is-forced.js");
-var hasOwn = __webpack_require__(/*! ../internals/has-own-property */ "./node_modules/core-js/internals/has-own-property.js");
-var inheritIfRequired = __webpack_require__(/*! ../internals/inherit-if-required */ "./node_modules/core-js/internals/inherit-if-required.js");
-var isPrototypeOf = __webpack_require__(/*! ../internals/object-is-prototype-of */ "./node_modules/core-js/internals/object-is-prototype-of.js");
-var isSymbol = __webpack_require__(/*! ../internals/is-symbol */ "./node_modules/core-js/internals/is-symbol.js");
-var toPrimitive = __webpack_require__(/*! ../internals/to-primitive */ "./node_modules/core-js/internals/to-primitive.js");
-var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
-var getOwnPropertyNames = (__webpack_require__(/*! ../internals/object-get-own-property-names */ "./node_modules/core-js/internals/object-get-own-property-names.js").f);
-var getOwnPropertyDescriptor = (__webpack_require__(/*! ../internals/object-get-own-property-descriptor */ "./node_modules/core-js/internals/object-get-own-property-descriptor.js").f);
-var defineProperty = (__webpack_require__(/*! ../internals/object-define-property */ "./node_modules/core-js/internals/object-define-property.js").f);
-var thisNumberValue = __webpack_require__(/*! ../internals/this-number-value */ "./node_modules/core-js/internals/this-number-value.js");
-var trim = (__webpack_require__(/*! ../internals/string-trim */ "./node_modules/core-js/internals/string-trim.js").trim);
-
-var NUMBER = 'Number';
-var NativeNumber = global[NUMBER];
-var PureNumberNamespace = path[NUMBER];
-var NumberPrototype = NativeNumber.prototype;
-var TypeError = global.TypeError;
-var stringSlice = uncurryThis(''.slice);
-var charCodeAt = uncurryThis(''.charCodeAt);
-
-// `ToNumeric` abstract operation
-// https://tc39.es/ecma262/#sec-tonumeric
-var toNumeric = function (value) {
-  var primValue = toPrimitive(value, 'number');
-  return typeof primValue == 'bigint' ? primValue : toNumber(primValue);
-};
-
-// `ToNumber` abstract operation
-// https://tc39.es/ecma262/#sec-tonumber
-var toNumber = function (argument) {
-  var it = toPrimitive(argument, 'number');
-  var first, third, radix, maxCode, digits, length, index, code;
-  if (isSymbol(it)) throw new TypeError('Cannot convert a Symbol value to a number');
-  if (typeof it == 'string' && it.length > 2) {
-    it = trim(it);
-    first = charCodeAt(it, 0);
-    if (first === 43 || first === 45) {
-      third = charCodeAt(it, 2);
-      if (third === 88 || third === 120) return NaN; // Number('+0x1') should be NaN, old V8 fix
-    } else if (first === 48) {
-      switch (charCodeAt(it, 1)) {
-        // fast equal of /^0b[01]+$/i
-        case 66:
-        case 98:
-          radix = 2;
-          maxCode = 49;
-          break;
-        // fast equal of /^0o[0-7]+$/i
-        case 79:
-        case 111:
-          radix = 8;
-          maxCode = 55;
-          break;
-        default:
-          return +it;
-      }
-      digits = stringSlice(it, 2);
-      length = digits.length;
-      for (index = 0; index < length; index++) {
-        code = charCodeAt(digits, index);
-        // parseInt parses a string to a first unavailable symbol
-        // but ToNumber should return NaN if a string contains unavailable symbols
-        if (code < 48 || code > maxCode) return NaN;
-      } return parseInt(digits, radix);
-    }
-  } return +it;
-};
-
-var FORCED = isForced(NUMBER, !NativeNumber(' 0o1') || !NativeNumber('0b1') || NativeNumber('+0x1'));
-
-var calledWithNew = function (dummy) {
-  // includes check on 1..constructor(foo) case
-  return isPrototypeOf(NumberPrototype, dummy) && fails(function () { thisNumberValue(dummy); });
-};
-
-// `Number` constructor
-// https://tc39.es/ecma262/#sec-number-constructor
-var NumberWrapper = function Number(value) {
-  var n = arguments.length < 1 ? 0 : NativeNumber(toNumeric(value));
-  return calledWithNew(this) ? inheritIfRequired(Object(n), this, NumberWrapper) : n;
-};
-
-NumberWrapper.prototype = NumberPrototype;
-if (FORCED && !IS_PURE) NumberPrototype.constructor = NumberWrapper;
-
-$({ global: true, constructor: true, wrap: true, forced: FORCED }, {
-  Number: NumberWrapper
-});
-
-// Use `internal/copy-constructor-properties` helper in `core-js@4`
-var copyConstructorProperties = function (target, source) {
-  for (var keys = DESCRIPTORS ? getOwnPropertyNames(source) : (
-    // ES3:
-    'MAX_VALUE,MIN_VALUE,NaN,NEGATIVE_INFINITY,POSITIVE_INFINITY,' +
-    // ES2015 (in case, if modules with ES2015 Number statics required before):
-    'EPSILON,MAX_SAFE_INTEGER,MIN_SAFE_INTEGER,isFinite,isInteger,isNaN,isSafeInteger,parseFloat,parseInt,' +
-    // ESNext
-    'fromString,range'
-  ).split(','), j = 0, key; keys.length > j; j++) {
-    if (hasOwn(source, key = keys[j]) && !hasOwn(target, key)) {
-      defineProperty(target, key, getOwnPropertyDescriptor(source, key));
-    }
-  }
-};
-
-if (IS_PURE && PureNumberNamespace) copyConstructorProperties(path[NUMBER], PureNumberNamespace);
-if (FORCED || IS_PURE) copyConstructorProperties(path[NUMBER], NativeNumber);
 
 
 /***/ }),
@@ -5393,6 +5086,87 @@ defineIterator(String, 'String', function (iterated) {
   point = charAt(string, index);
   state.index += point.length;
   return createIterResultObject(point, false);
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es.string.replace-all.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/core-js/modules/es.string.replace-all.js ***!
+  \***************************************************************/
+/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+
+
+var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
+var call = __webpack_require__(/*! ../internals/function-call */ "./node_modules/core-js/internals/function-call.js");
+var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ "./node_modules/core-js/internals/function-uncurry-this.js");
+var requireObjectCoercible = __webpack_require__(/*! ../internals/require-object-coercible */ "./node_modules/core-js/internals/require-object-coercible.js");
+var isCallable = __webpack_require__(/*! ../internals/is-callable */ "./node_modules/core-js/internals/is-callable.js");
+var isNullOrUndefined = __webpack_require__(/*! ../internals/is-null-or-undefined */ "./node_modules/core-js/internals/is-null-or-undefined.js");
+var isRegExp = __webpack_require__(/*! ../internals/is-regexp */ "./node_modules/core-js/internals/is-regexp.js");
+var toString = __webpack_require__(/*! ../internals/to-string */ "./node_modules/core-js/internals/to-string.js");
+var getMethod = __webpack_require__(/*! ../internals/get-method */ "./node_modules/core-js/internals/get-method.js");
+var getRegExpFlags = __webpack_require__(/*! ../internals/regexp-get-flags */ "./node_modules/core-js/internals/regexp-get-flags.js");
+var getSubstitution = __webpack_require__(/*! ../internals/get-substitution */ "./node_modules/core-js/internals/get-substitution.js");
+var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js");
+var IS_PURE = __webpack_require__(/*! ../internals/is-pure */ "./node_modules/core-js/internals/is-pure.js");
+
+var REPLACE = wellKnownSymbol('replace');
+var $TypeError = TypeError;
+var indexOf = uncurryThis(''.indexOf);
+var replace = uncurryThis(''.replace);
+var stringSlice = uncurryThis(''.slice);
+var max = Math.max;
+
+var stringIndexOf = function (string, searchValue, fromIndex) {
+  if (fromIndex > string.length) return -1;
+  if (searchValue === '') return fromIndex;
+  return indexOf(string, searchValue, fromIndex);
+};
+
+// `String.prototype.replaceAll` method
+// https://tc39.es/ecma262/#sec-string.prototype.replaceall
+$({ target: 'String', proto: true }, {
+  replaceAll: function replaceAll(searchValue, replaceValue) {
+    var O = requireObjectCoercible(this);
+    var IS_REG_EXP, flags, replacer, string, searchString, functionalReplace, searchLength, advanceBy, replacement;
+    var position = 0;
+    var endOfLastMatch = 0;
+    var result = '';
+    if (!isNullOrUndefined(searchValue)) {
+      IS_REG_EXP = isRegExp(searchValue);
+      if (IS_REG_EXP) {
+        flags = toString(requireObjectCoercible(getRegExpFlags(searchValue)));
+        if (!~indexOf(flags, 'g')) throw new $TypeError('`.replaceAll` does not allow non-global regexes');
+      }
+      replacer = getMethod(searchValue, REPLACE);
+      if (replacer) {
+        return call(replacer, searchValue, O, replaceValue);
+      } else if (IS_PURE && IS_REG_EXP) {
+        return replace(toString(O), searchValue, replaceValue);
+      }
+    }
+    string = toString(O);
+    searchString = toString(searchValue);
+    functionalReplace = isCallable(replaceValue);
+    if (!functionalReplace) replaceValue = toString(replaceValue);
+    searchLength = searchString.length;
+    advanceBy = max(1, searchLength);
+    position = stringIndexOf(string, searchString, 0);
+    while (position !== -1) {
+      replacement = functionalReplace
+        ? toString(replaceValue(searchString, position, string))
+        : getSubstitution(searchString, string, position, [], undefined, replaceValue);
+      result += stringSlice(string, endOfLastMatch, position) + replacement;
+      endOfLastMatch = position + searchLength;
+      position = stringIndexOf(string, searchString, position + advanceBy);
+    }
+    if (endOfLastMatch < string.length) {
+      result += stringSlice(string, endOfLastMatch);
+    }
+    return result;
+  }
 });
 
 
@@ -5925,22 +5699,6 @@ $({ target: 'Symbol', stat: true, forced: !NATIVE_SYMBOL_REGISTRY }, {
 
 /***/ }),
 
-/***/ "./node_modules/core-js/modules/es.symbol.iterator.js":
-/*!************************************************************!*\
-  !*** ./node_modules/core-js/modules/es.symbol.iterator.js ***!
-  \************************************************************/
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
-
-
-var defineWellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol-define */ "./node_modules/core-js/internals/well-known-symbol-define.js");
-
-// `Symbol.iterator` well-known symbol
-// https://tc39.es/ecma262/#sec-symbol.iterator
-defineWellKnownSymbol('iterator');
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/modules/es.symbol.js":
 /*!***************************************************!*\
   !*** ./node_modules/core-js/modules/es.symbol.js ***!
@@ -5986,23 +5744,15 @@ $({ target: 'Symbol', stat: true, forced: !NATIVE_SYMBOL_REGISTRY }, {
 
 /***/ }),
 
-/***/ "./node_modules/core-js/modules/es.symbol.to-primitive.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/core-js/modules/es.symbol.to-primitive.js ***!
-  \****************************************************************/
+/***/ "./node_modules/core-js/modules/esnext.string.replace-all.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/core-js/modules/esnext.string.replace-all.js ***!
+  \*******************************************************************/
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 
-var defineWellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol-define */ "./node_modules/core-js/internals/well-known-symbol-define.js");
-var defineSymbolToPrimitive = __webpack_require__(/*! ../internals/symbol-define-to-primitive */ "./node_modules/core-js/internals/symbol-define-to-primitive.js");
-
-// `Symbol.toPrimitive` well-known symbol
-// https://tc39.es/ecma262/#sec-symbol.toprimitive
-defineWellKnownSymbol('toPrimitive');
-
-// `Symbol.prototype[@@toPrimitive]` method
-// https://tc39.es/ecma262/#sec-symbol.prototype-@@toprimitive
-defineSymbolToPrimitive();
+// TODO: Remove from `core-js@4`
+__webpack_require__(/*! ../modules/es.string.replace-all */ "./node_modules/core-js/modules/es.string.replace-all.js");
 
 
 /***/ }),
@@ -6036,55 +5786,6 @@ for (var COLLECTION_NAME in DOMIterables) {
 }
 
 handlePrototype(DOMTokenListPrototype);
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/modules/web.dom-collections.iterator.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/core-js/modules/web.dom-collections.iterator.js ***!
-  \**********************************************************************/
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
-
-
-var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
-var DOMIterables = __webpack_require__(/*! ../internals/dom-iterables */ "./node_modules/core-js/internals/dom-iterables.js");
-var DOMTokenListPrototype = __webpack_require__(/*! ../internals/dom-token-list-prototype */ "./node_modules/core-js/internals/dom-token-list-prototype.js");
-var ArrayIteratorMethods = __webpack_require__(/*! ../modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-var createNonEnumerableProperty = __webpack_require__(/*! ../internals/create-non-enumerable-property */ "./node_modules/core-js/internals/create-non-enumerable-property.js");
-var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js");
-
-var ITERATOR = wellKnownSymbol('iterator');
-var TO_STRING_TAG = wellKnownSymbol('toStringTag');
-var ArrayValues = ArrayIteratorMethods.values;
-
-var handlePrototype = function (CollectionPrototype, COLLECTION_NAME) {
-  if (CollectionPrototype) {
-    // some Chrome versions have non-configurable methods on DOMTokenList
-    if (CollectionPrototype[ITERATOR] !== ArrayValues) try {
-      createNonEnumerableProperty(CollectionPrototype, ITERATOR, ArrayValues);
-    } catch (error) {
-      CollectionPrototype[ITERATOR] = ArrayValues;
-    }
-    if (!CollectionPrototype[TO_STRING_TAG]) {
-      createNonEnumerableProperty(CollectionPrototype, TO_STRING_TAG, COLLECTION_NAME);
-    }
-    if (DOMIterables[COLLECTION_NAME]) for (var METHOD_NAME in ArrayIteratorMethods) {
-      // some Chrome versions have non-configurable methods on DOMTokenList
-      if (CollectionPrototype[METHOD_NAME] !== ArrayIteratorMethods[METHOD_NAME]) try {
-        createNonEnumerableProperty(CollectionPrototype, METHOD_NAME, ArrayIteratorMethods[METHOD_NAME]);
-      } catch (error) {
-        CollectionPrototype[METHOD_NAME] = ArrayIteratorMethods[METHOD_NAME];
-      }
-    }
-  }
-};
-
-for (var COLLECTION_NAME in DOMIterables) {
-  handlePrototype(global[COLLECTION_NAME] && global[COLLECTION_NAME].prototype, COLLECTION_NAME);
-}
-
-handlePrototype(DOMTokenListPrototype, 'DOMTokenList');
 
 
 /***/ })
@@ -6231,6 +5932,20 @@ window.addEventListener('DOMContentLoaded', function () {
       } else {
         cardText.textContent = 'Отсутствуют · 0 товаров';
         document.querySelector('.main__basket__product__absent').style.paddingTop = '';
+      }
+      productElement.remove();
+    });
+  });
+
+  //Удаление товаров из секции card-1
+  var btnsDeleteTwo = document.querySelectorAll('.main__basket__product .control-buttons__delete'),
+    btnCheckBoxAll = document.querySelectorAll('.checkbox.product-card');
+  btnsDeleteTwo.forEach(function (item, index) {
+    item.addEventListener('click', function (e) {
+      document.querySelector('.main__basket__product').style.paddingTop = '10px';
+      var productElement = e.target.closest('.product__card');
+      if (btnCheckBoxAll[index].classList.contains('checkbox_active')) {
+        btnCheckBoxAll[index].click();
       }
       productElement.remove();
     });

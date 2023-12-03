@@ -19,12 +19,12 @@ export const Data = [
         quantityStart: 1,
         remainingGoods: 2,
         price: 1051,
-        priceDiscount: 522,
+        priceDiscount: 368,
         discount: {
             discShop: 'Скидка 55%',
-            valueShop: '−300 сом',
+            valueShop: '−578 сом',
             discPers: 'Скидка покупателя 10%',
-            valueShop: '−30 сом',
+            valuePers: '−105 сом',
         },
     },
     {
@@ -43,13 +43,13 @@ export const Data = [
         },
         quantityMin: 1,
         quantityStart: 200,
-        price: 11500,
-        priceDiscount: 2300047,
+        price: '2 300 000',
+        priceDiscount: '805 000',
         discount: {
             discShop: 'Скидка 55%',
-            valueShop: '−300 сом',
+            valueShop: '−6325 сом',
             discPers: 'Скидка покупателя 10%',
-            valueShop: '−30 сом',
+            valuePers: '−1150 сом',
         },
     },
     {
@@ -66,13 +66,13 @@ export const Data = [
         quantityMin: 1,
         quantityStart: 2,
         remainingGoods: 2,
-        price: 247,
-        priceDiscount: 245,
+        price: 950,
+        priceDiscount: 334,
         discount: {
             discShop: 'Скидка 55%',
-            valueShop: '−300 сом',
+            valueShop: '−261 сом',
             discPers: 'Скидка покупателя 10%',
-            valueShop: '−30 сом',
+            valuePers: '−48 сом',
         },
     }
 ]

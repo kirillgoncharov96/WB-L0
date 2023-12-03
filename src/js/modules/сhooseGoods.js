@@ -1,3 +1,4 @@
+import formatValue from "./formatValue";
 
 const chooseGoods = () => {
 
@@ -102,6 +103,7 @@ const chooseGoods = () => {
         })
         productShow(sum);
         deliveryShow(sum);
+        orderValueShow();
     }
 
     //Функция отображения кол-ва товара в оформлении заказа
@@ -110,19 +112,24 @@ const chooseGoods = () => {
         const number = document.querySelector('.item-2__details .selector__counter-number'),
               checkboxCardTwo = document.querySelectorAll('.checkbox.product-card')[1];
 
-        if (+number.value > 184 && window.innerWidth > 994 && checkboxCardTwo.classList.contains('checkbox_active')) {
-            document.querySelector('.delivery-location__adress').style.marginBottom = '4px';
-            document.querySelector('.delivery-location__date').style.display = 'block';
-            document.querySelector('.delivery-location__date').textContent = `5-8 фев`;
-
-        } else if(value !== 0 && window.innerWidth > 994) {
-            document.querySelector('.delivery-location__adress').style.marginBottom = '4px';
-            document.querySelector('.delivery-location__date').style.display = 'block';
-            document.querySelector('.delivery-location__date').textContent = `5-6 фев`;
-        } else {
-            document.querySelector('.delivery-location__adress').style.marginBottom = '32px';
-            document.querySelector('.delivery-location__date').style.display = 'none';
+        if(number !== undefined) {
+            if (parseInt(number.value) > 184 && window.innerWidth > 994 && checkboxCardTwo.classList.contains('checkbox_active')) {
+                document.querySelector('.delivery-location__adress').style.marginBottom = '4px';
+                document.querySelector('.delivery-location__date').style.display = 'block';
+                document.querySelector('.delivery-location__date').textContent = `5-8 фев`;
+    
+            } else if(value !== 0 && window.innerWidth > 994) {
+                document.querySelector('.delivery-location__adress').style.marginBottom = '4px';
+                document.querySelector('.delivery-location__date').style.display = 'block';
+                document.querySelector('.delivery-location__date').textContent = `5-6 фев`;
+            } else {
+                document.querySelector('.delivery-location__adress').style.marginBottom = '32px';
+                document.querySelector('.delivery-location__date').style.display = 'none';
+            }
+            
         }
+
+        
 
         const first = value % 100,
               second = first % 10;
@@ -145,7 +152,7 @@ const chooseGoods = () => {
         
     }
 
-    //Функиця отображения кол-ва карточек товара и дату доставки
+    //Функиция отображения кол-ва карточек товара и дату доставки
     function deliveryShow(value) {
 
         const basketValue = document.querySelector('.navbar-pc__notify'),
@@ -182,7 +189,8 @@ const chooseGoods = () => {
         //Отображение товара на дату (5-6 фев)
         const checkboxAll = document.querySelectorAll('.checkbox.product-card.checkbox_active'),
               checkboxActive = document.querySelectorAll('.checkbox.product-card'),
-              productCards = document.querySelectorAll('#delivery_product > div');
+              productCards = document.querySelectorAll('#delivery_product > div'),
+              countProduct = document.querySelectorAll('.selector__counter-number');
 
 
         if(checkboxAll.length === 0) {
@@ -200,32 +208,88 @@ const chooseGoods = () => {
             }
         });
 
-        productCards.forEach((item, index) => {
-            if(parseInt(document.querySelectorAll('.selector__counter-number')[index].value) > 1 && index !== 1) {
-                item.querySelector('.product-card__counter').textContent = `${document.querySelectorAll('.selector__counter-number')[index].value}`;
-                item.querySelector('.product-card__counter').style.display = 'flex';
-            } else if(parseInt(document.querySelectorAll('.selector__counter-number')[index].value) > 1 && parseInt(document.querySelectorAll('.selector__counter-number')[index].value) <= 184) {
-                item.querySelector('.product-card__counter').textContent = `${document.querySelectorAll('.selector__counter-number')[1].value}`;
-                item.querySelector('.product-card__counter').style.display = 'flex';
-            } else if(parseInt(document.querySelectorAll('.selector__counter-number')[index].value) > 184) {
-                item.querySelector('.product-card__counter').textContent = `184`;
-                item.querySelector('.product-card__counter').style.display = 'flex';
-            } else {
-                item.querySelector('.product-card__counter').style.display = 'none';
-            }
-        });
+        if(productCards.length > 1) {
+            productCards.forEach((item, index) => {
+                if(parseInt(countProduct[index].value) > 1 && index !== 1) {
+                    item.querySelector('.product-card__counter').textContent = `${countProduct[index].value}`;
+                    item.querySelector('.product-card__counter').style.display = 'flex';
+                } else if(parseInt(countProduct[index].value) > 1 && parseInt(countProduct[index].value) <= 184) {
+                    item.querySelector('.product-card__counter').textContent = `${countProduct[1].value}`;
+                    item.querySelector('.product-card__counter').style.display = 'flex';
+                } else if(parseInt(countProduct[index].value) > 184) {
+                    item.querySelector('.product-card__counter').textContent = `184`;
+                    item.querySelector('.product-card__counter').style.display = 'flex';
+                } else {
+                    item.querySelector('.product-card__counter').style.display = 'none';
+                }
+            });
+        } else {
+            productCards.querySelector('.product-card__counter').style.display = 'none';
+        }
 
         
 
-
-
-
-
     }
 
+    //Функция работы с ценой товара и скидкой
+    function orderValueShow() {
+        const countProducts = document.querySelectorAll('.selector__counter-number'),
+              priceProducts = document.querySelectorAll('.product__card__value'),
+              discProducts = document.querySelectorAll('.discount__value'),
+              orderPriceAll = document.querySelector('.main__total-price__value .price__value'),
+              priceCards = document.querySelector('.card-1__text.card-1__text__close'),
+              orderDiscAll = document.querySelector('.quantity-goods__price.price'),
+              minusDiscAll = document.querySelector('.discount__price.price'),
+              submitBtn = document.querySelector('.main__total-price__order-btn'),
+              checkboxPayMethod = document.querySelector('.checkbox.select-paymethod');
 
+        countProducts.forEach((value, index) => {
+            if (index === 0) {
+                priceProducts[index].textContent = `${parseInt(value.value * 368)}`;
+                discProducts[index].textContent = `${parseInt(value.value * 1051)} сом`;
+            } else if(index === 1) {
+                priceProducts[index].textContent = `${formatValue(parseInt(value.value * 4025))}`;
+                discProducts[index].textContent = `${formatValue(parseInt(value.value * 11500))} сом`;
+            } else {
+                priceProducts[index].textContent = `${parseInt(value.value * 167)}`;
+                discProducts[index].textContent = `${parseInt(value.value * 475)} сом`;
+            }
+        });
 
+        //Отображение общей цены 
+        let sumProducts = 0;
+        priceProducts.forEach((price, index) => {
+            if(document.querySelector(`.item-${index + 1}__details`).querySelector('.checkbox.product-card.checkbox_active')) {
+                sumProducts += parseInt(price.textContent.replaceAll(' ', ''));
+            } else {
+                sumProducts += 0
+            }
+        });
+        orderPriceAll.textContent = `${formatValue(sumProducts)}`;
+        priceCards.children[1].textContent = `${formatValue(sumProducts)} сом`;
 
+        //Отображение общей скидки
+        let sumDisc = 0;
+        discProducts.forEach((discount, index) => {
+            if(document.querySelector(`.item-${index + 1}__details`).querySelector('.checkbox.product-card.checkbox_active')) {
+                sumDisc += parseInt(discount.textContent.replaceAll(' ', ''));
+            } else {
+                sumDisc += 0
+            }
+        });
+        orderDiscAll.children[0].textContent = `${formatValue(sumDisc)}`;
+        if(sumProducts - sumDisc !== 0) {
+            minusDiscAll.children[0].textContent = `−${formatValue(sumDisc - sumProducts)}`;
+        } else {
+            minusDiscAll.children[0].textContent = `0`;
+        }
+        
+        //Если активна кнопка оплаты по карте
+        if (checkboxPayMethod.classList.contains('checkbox_active')) {
+            submitBtn.textContent = `Оплатить ${formatValue(orderPriceAll.textContent)} сом`;
+        } 
+
+    }
 
 }
 

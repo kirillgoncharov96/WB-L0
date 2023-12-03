@@ -33,7 +33,6 @@ window.addEventListener('DOMContentLoaded', () => {
         cardText = document.querySelector('.card-2__text');
 
     btnsDelete.forEach((item) => {
-
         item.addEventListener('click', (e) => {
             const productElement = e.target.closest('.product__card__absent');
             document.querySelector('.main__basket__product__absent').style.paddingTop = '10px';
@@ -53,6 +52,22 @@ window.addEventListener('DOMContentLoaded', () => {
         })
     });
 
+    //Удаление товаров из секции card-1
+    const btnsDeleteTwo = document.querySelectorAll('.main__basket__product .control-buttons__delete'),
+          btnCheckBoxAll = document.querySelectorAll('.checkbox.product-card');
 
+    btnsDeleteTwo.forEach((item, index) =>{
+        item.addEventListener('click', (e) => {
+            document.querySelector('.main__basket__product').style.paddingTop = '10px';
+            
+            const productElement = e.target.closest('.product__card');
+            
+            if (btnCheckBoxAll[index].classList.contains('checkbox_active')) {
+                btnCheckBoxAll[index].click();
+            }
+            productElement.remove();
+            
+        })
+    });
 
 }); 
