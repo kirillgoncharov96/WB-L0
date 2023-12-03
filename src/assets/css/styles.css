@@ -1528,7 +1528,8 @@ input[type="number"] {
     font-size: 13px;
     font-weight: 400;
     line-height: 16px;
-    margin-bottom: 4px;
+    margin-bottom: 32px;
+    
 
     @media (max-width: 994px) {
         display: none;
@@ -1546,6 +1547,7 @@ input[type="number"] {
     width: -moz-fit-content;
     width: fit-content;
     margin-bottom: 11px;
+    display: none;
 
     @media (max-width: 994px) {
         display: none;
@@ -1811,6 +1813,7 @@ input[type="number"] {
 }
 
 .delivery__info.data-delivery {
+    display: none;
     @media (max-width: 320px) {
         margin-bottom: 24px;
         gap: 12px;
@@ -1827,6 +1830,7 @@ input[type="number"] {
 }
 
 .delivery__info.data-delivery:nth-last-of-type(2) {
+    display: none;
     margin-bottom: 24px;
 }
 

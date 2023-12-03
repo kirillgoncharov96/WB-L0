@@ -85,8 +85,9 @@ const showGoods = () => {
                         class="product__card__quantity-goods__selector selector__counter"
                     >
                         <button
-                            class="selector__counter-minus"
+                            class="selector__counter-minus disabled"
                             type="button"
+                            disabled
                         >
                             <span>-</span>
                         </button>
@@ -407,8 +408,9 @@ const showGoods = () => {
                                 onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                             />
                             <button
-                                class="selector__counter-plus"
+                                class="selector__counter-plus disabled"
                                 type="button"
+                                disabled
                             >
                                 <span>+</span>
                             </button>
