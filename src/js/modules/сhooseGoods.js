@@ -112,7 +112,7 @@ const chooseGoods = () => {
         const number = document.querySelector('.item-2__details .selector__counter-number'),
               checkboxCardTwo = document.querySelectorAll('.checkbox.product-card')[1];
 
-        if(number !== undefined) {
+        try {
             if (parseInt(number.value) > 184 && window.innerWidth > 994 && checkboxCardTwo.classList.contains('checkbox_active')) {
                 document.querySelector('.delivery-location__adress').style.marginBottom = '4px';
                 document.querySelector('.delivery-location__date').style.display = 'block';
@@ -127,8 +127,9 @@ const chooseGoods = () => {
                 document.querySelector('.delivery-location__date').style.display = 'none';
             }
             
-        }
+        } catch(e) {
 
+        }
         
 
         const first = value % 100,
@@ -164,22 +165,26 @@ const chooseGoods = () => {
             
 
         //Работа с отображением доставки товара на другую дату (при увеличении кол-ва допустим на складе в этом пункте)
-        if (+number.value > 184 && window.innerWidth > 320 && checkboxCardTwo.classList.contains('checkbox_active')) {
-            document.querySelectorAll('.delivery__info.data-delivery')[1].style.display = 'flex';
-            document.querySelectorAll('.delivery__info.data-delivery')[0].style.marginBottom = '16px';
-        } else if (+number.value > 184 && window.innerWidth <= 320 && checkboxCardTwo.classList.contains('checkbox_active')) {
-            document.querySelectorAll('.delivery__info.data-delivery')[1].style.display = 'flex';
-            document.querySelectorAll('.delivery__info.data-delivery')[0].style.marginBottom = '24px';
-        } else {
-            document.querySelectorAll('.delivery__info.data-delivery')[1].style.display = 'none';
-            document.querySelectorAll('.delivery__info.data-delivery')[0].style.marginBottom = '24px';
-        }
-        
-        if(+number.value - 184 === 1) {
-            secondProductAnotherValue.style.display = 'none';
-        } else if (+number.value - 184 > 1) {
-            secondProductAnotherValue.style.display = 'flex';
-            secondProductAnotherValue.textContent = `${+number.value - 184}`;
+        try {
+            if (+number.value > 184 && window.innerWidth > 320 && checkboxCardTwo.classList.contains('checkbox_active')) {
+                document.querySelectorAll('.delivery__info.data-delivery')[1].style.display = 'flex';
+                document.querySelectorAll('.delivery__info.data-delivery')[0].style.marginBottom = '16px';
+            } else if (+number.value > 184 && window.innerWidth <= 320 && checkboxCardTwo.classList.contains('checkbox_active')) {
+                document.querySelectorAll('.delivery__info.data-delivery')[1].style.display = 'flex';
+                document.querySelectorAll('.delivery__info.data-delivery')[0].style.marginBottom = '24px';
+            } else {
+                document.querySelectorAll('.delivery__info.data-delivery')[1].style.display = 'none';
+                document.querySelectorAll('.delivery__info.data-delivery')[0].style.marginBottom = '24px';
+            }
+
+            if(+number.value - 184 === 1) {
+                secondProductAnotherValue.style.display = 'none';
+            } else if (+number.value - 184 > 1) {
+                secondProductAnotherValue.style.display = 'flex';
+                secondProductAnotherValue.textContent = `${+number.value - 184}`;
+            }
+        } catch(e) {
+
         }
         
         //Отображение кол-ва товара в корзине
@@ -208,7 +213,7 @@ const chooseGoods = () => {
             }
         });
 
-        if(productCards.length > 1) {
+        try {
             productCards.forEach((item, index) => {
                 if(parseInt(countProduct[index].value) > 1 && index !== 1) {
                     item.querySelector('.product-card__counter').textContent = `${countProduct[index].value}`;
@@ -223,8 +228,8 @@ const chooseGoods = () => {
                     item.querySelector('.product-card__counter').style.display = 'none';
                 }
             });
-        } else {
-            productCards.querySelector('.product-card__counter').style.display = 'none';
+        } catch(e) {
+    
         }
 
         
@@ -290,6 +295,22 @@ const chooseGoods = () => {
         } 
 
     }
+
+    //Удаление товаров из секции card-1
+    const btnsDeleteTwo = document.querySelectorAll('.main__basket__product .control-buttons__delete');
+
+    btnsDeleteTwo.forEach((item, index) =>{
+        item.addEventListener('click', (e) => {
+            document.querySelector('.main__basket__product').style.paddingTop = '10px';
+            const productElement = e.target.closest('.product__card');
+            btnCheckBoxAll.disabled = true;
+            if (btnCheckBoxAllGoods[index].classList.contains('checkbox_active')) {
+                btnCheckBoxAllGoods[index].click();
+            }
+            productElement.style.display = 'none';
+            
+        })
+    });
 
 }
 

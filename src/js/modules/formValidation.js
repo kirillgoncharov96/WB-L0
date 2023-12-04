@@ -5,7 +5,11 @@ const formValidation = () => {
     //Валидация inputs, с проверкой ввода и добавления ошибки/оповещения при проверке на выполнение валидности
     const formInputs = document.querySelector('.main__basket__product-recipient.form'),
         orderForm = document.querySelector('.main__total-price__order-btn');
+
+    //Класс для вызова стилей при не заполнении/ошибки заполнения полей
     const INVALID_CLASSNAME = 'invalid';
+
+    //Подсказки/пояснения для inputs
     const EMPTY_WARNINGS = {
         name: 'Укажите имя',
         surname: 'Введите фамилию',
@@ -34,6 +38,7 @@ const formValidation = () => {
         return { isValid: true, invalidInputs };
     }
 
+    //Проверка каждого inputs по заданным параметрам
     function validateInput(input) {
         const inputID = input.id;
         const label = input.closest('label');
@@ -83,6 +88,7 @@ const formValidation = () => {
         input.value = formattedValue;
     }
 
+    //Стилизация отображения номера в inputs(mobile)
     function formatTelNumber(number) {
         let formattedValue = '';
         let currentPos = 1;
@@ -152,9 +158,10 @@ const formValidation = () => {
             return;
         };
 
-        const { isValid, invalidInputs } = validateForm(formToValidate);
+        const { isValid, invalidInputs } = validateForm(formToValidate),
+        errorElement = document.querySelector('.main__basket__product-recipient.box');
 
-        if (!isValid) {
+        if (!isValid && window.innerWidth > 425) {
             event.preventDefault();
 
             invalidInputs.forEach(input => {
@@ -164,7 +171,22 @@ const formValidation = () => {
                 setTimeout(() => {
                     input.classList.remove('shake')
                 }, 350)
-            })
+            });
+            
+        } else if (!isValid && window.innerWidth <= 425) {
+            event.preventDefault();
+
+            invalidInputs.forEach(input => {
+                if (!input.classList.contains('shake')) {
+                    input.classList.add('shake');
+                }
+                setTimeout(() => {
+                    input.classList.remove('shake')
+                }, 350)
+            });
+
+            errorElement.scrollIntoView({ block: "start", behavior: "smooth" });
+         
         }
 
         //inputs валидируются в момент ввода, а не после события blur

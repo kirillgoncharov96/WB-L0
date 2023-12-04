@@ -167,7 +167,11 @@ var formValidation = function formValidation() {
   //Валидация inputs, с проверкой ввода и добавления ошибки/оповещения при проверке на выполнение валидности
   var formInputs = document.querySelector('.main__basket__product-recipient.form'),
     orderForm = document.querySelector('.main__total-price__order-btn');
+
+  //Класс для вызова стилей при не заполнении/ошибки заполнения полей
   var INVALID_CLASSNAME = 'invalid';
+
+  //Подсказки/пояснения для inputs
   var EMPTY_WARNINGS = {
     name: 'Укажите имя',
     surname: 'Введите фамилию',
@@ -202,6 +206,8 @@ var formValidation = function formValidation() {
       invalidInputs: invalidInputs
     };
   }
+
+  //Проверка каждого inputs по заданным параметрам
   function validateInput(input) {
     var _validationConditions;
     var inputID = input.id;
@@ -256,6 +262,8 @@ var formValidation = function formValidation() {
     var formattedValue = formatTelNumber(inputValue);
     input.value = formattedValue;
   }
+
+  //Стилизация отображения номера в inputs(mobile)
   function formatTelNumber(number) {
     var formattedValue = '';
     var currentPos = 1;
@@ -321,8 +329,9 @@ var formValidation = function formValidation() {
     ;
     var _validateForm = validateForm(formToValidate),
       isValid = _validateForm.isValid,
-      invalidInputs = _validateForm.invalidInputs;
-    if (!isValid) {
+      invalidInputs = _validateForm.invalidInputs,
+      errorElement = document.querySelector('.main__basket__product-recipient.box');
+    if (!isValid && window.innerWidth > 425) {
       event.preventDefault();
       invalidInputs.forEach(function (input) {
         if (!input.classList.contains('shake')) {
@@ -331,6 +340,20 @@ var formValidation = function formValidation() {
         setTimeout(function () {
           input.classList.remove('shake');
         }, 350);
+      });
+    } else if (!isValid && window.innerWidth <= 425) {
+      event.preventDefault();
+      invalidInputs.forEach(function (input) {
+        if (!input.classList.contains('shake')) {
+          input.classList.add('shake');
+        }
+        setTimeout(function () {
+          input.classList.remove('shake');
+        }, 350);
+      });
+      errorElement.scrollIntoView({
+        block: "start",
+        behavior: "smooth"
       });
     }
 
@@ -819,7 +842,7 @@ var chooseGoods = function chooseGoods() {
   function productShow(value) {
     var number = document.querySelector('.item-2__details .selector__counter-number'),
       checkboxCardTwo = document.querySelectorAll('.checkbox.product-card')[1];
-    if (number !== undefined) {
+    try {
       if (parseInt(number.value) > 184 && window.innerWidth > 994 && checkboxCardTwo.classList.contains('checkbox_active')) {
         document.querySelector('.delivery-location__adress').style.marginBottom = '4px';
         document.querySelector('.delivery-location__date').style.display = 'block';
@@ -832,7 +855,7 @@ var chooseGoods = function chooseGoods() {
         document.querySelector('.delivery-location__adress').style.marginBottom = '32px';
         document.querySelector('.delivery-location__date').style.display = 'none';
       }
-    }
+    } catch (e) {}
     var first = value % 100,
       second = first % 10;
     if (first >= 11 && first <= 19) {
@@ -860,22 +883,24 @@ var chooseGoods = function chooseGoods() {
       checkboxCardTwo = document.querySelectorAll('.checkbox.product-card')[1];
 
     //Работа с отображением доставки товара на другую дату (при увеличении кол-ва допустим на складе в этом пункте)
-    if (+number.value > 184 && window.innerWidth > 320 && checkboxCardTwo.classList.contains('checkbox_active')) {
-      document.querySelectorAll('.delivery__info.data-delivery')[1].style.display = 'flex';
-      document.querySelectorAll('.delivery__info.data-delivery')[0].style.marginBottom = '16px';
-    } else if (+number.value > 184 && window.innerWidth <= 320 && checkboxCardTwo.classList.contains('checkbox_active')) {
-      document.querySelectorAll('.delivery__info.data-delivery')[1].style.display = 'flex';
-      document.querySelectorAll('.delivery__info.data-delivery')[0].style.marginBottom = '24px';
-    } else {
-      document.querySelectorAll('.delivery__info.data-delivery')[1].style.display = 'none';
-      document.querySelectorAll('.delivery__info.data-delivery')[0].style.marginBottom = '24px';
-    }
-    if (+number.value - 184 === 1) {
-      secondProductAnotherValue.style.display = 'none';
-    } else if (+number.value - 184 > 1) {
-      secondProductAnotherValue.style.display = 'flex';
-      secondProductAnotherValue.textContent = "".concat(+number.value - 184);
-    }
+    try {
+      if (+number.value > 184 && window.innerWidth > 320 && checkboxCardTwo.classList.contains('checkbox_active')) {
+        document.querySelectorAll('.delivery__info.data-delivery')[1].style.display = 'flex';
+        document.querySelectorAll('.delivery__info.data-delivery')[0].style.marginBottom = '16px';
+      } else if (+number.value > 184 && window.innerWidth <= 320 && checkboxCardTwo.classList.contains('checkbox_active')) {
+        document.querySelectorAll('.delivery__info.data-delivery')[1].style.display = 'flex';
+        document.querySelectorAll('.delivery__info.data-delivery')[0].style.marginBottom = '24px';
+      } else {
+        document.querySelectorAll('.delivery__info.data-delivery')[1].style.display = 'none';
+        document.querySelectorAll('.delivery__info.data-delivery')[0].style.marginBottom = '24px';
+      }
+      if (+number.value - 184 === 1) {
+        secondProductAnotherValue.style.display = 'none';
+      } else if (+number.value - 184 > 1) {
+        secondProductAnotherValue.style.display = 'flex';
+        secondProductAnotherValue.textContent = "".concat(+number.value - 184);
+      }
+    } catch (e) {}
 
     //Отображение кол-ва товара в корзине
     basketValue.textContent = "".concat(value);
@@ -898,7 +923,7 @@ var chooseGoods = function chooseGoods() {
         document.querySelector(".product-card__photo-".concat(index + 1)).style.display = 'none';
       }
     });
-    if (productCards.length > 1) {
+    try {
       productCards.forEach(function (item, index) {
         if (parseInt(countProduct[index].value) > 1 && index !== 1) {
           item.querySelector('.product-card__counter').textContent = "".concat(countProduct[index].value);
@@ -913,9 +938,7 @@ var chooseGoods = function chooseGoods() {
           item.querySelector('.product-card__counter').style.display = 'none';
         }
       });
-    } else {
-      productCards.querySelector('.product-card__counter').style.display = 'none';
-    }
+    } catch (e) {}
   }
 
   //Функция работы с ценой товара и скидкой
@@ -975,6 +998,20 @@ var chooseGoods = function chooseGoods() {
       submitBtn.textContent = "\u041E\u043F\u043B\u0430\u0442\u0438\u0442\u044C ".concat((0,_formatValue__WEBPACK_IMPORTED_MODULE_5__["default"])(orderPriceAll.textContent), " \u0441\u043E\u043C");
     }
   }
+
+  //Удаление товаров из секции card-1
+  var btnsDeleteTwo = document.querySelectorAll('.main__basket__product .control-buttons__delete');
+  btnsDeleteTwo.forEach(function (item, index) {
+    item.addEventListener('click', function (e) {
+      document.querySelector('.main__basket__product').style.paddingTop = '10px';
+      var productElement = e.target.closest('.product__card');
+      btnCheckBoxAll.disabled = true;
+      if (btnCheckBoxAllGoods[index].classList.contains('checkbox_active')) {
+        btnCheckBoxAllGoods[index].click();
+      }
+      productElement.style.display = 'none';
+    });
+  });
 };
 /* harmony default export */ __webpack_exports__["default"] = (chooseGoods);
 
@@ -5932,20 +5969,6 @@ window.addEventListener('DOMContentLoaded', function () {
       } else {
         cardText.textContent = 'Отсутствуют · 0 товаров';
         document.querySelector('.main__basket__product__absent').style.paddingTop = '';
-      }
-      productElement.remove();
-    });
-  });
-
-  //Удаление товаров из секции card-1
-  var btnsDeleteTwo = document.querySelectorAll('.main__basket__product .control-buttons__delete'),
-    btnCheckBoxAll = document.querySelectorAll('.checkbox.product-card');
-  btnsDeleteTwo.forEach(function (item, index) {
-    item.addEventListener('click', function (e) {
-      document.querySelector('.main__basket__product').style.paddingTop = '10px';
-      var productElement = e.target.closest('.product__card');
-      if (btnCheckBoxAll[index].classList.contains('checkbox_active')) {
-        btnCheckBoxAll[index].click();
       }
       productElement.remove();
     });
