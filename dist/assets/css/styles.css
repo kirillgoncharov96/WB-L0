@@ -1532,7 +1532,6 @@ input[type="number"] {
     font-weight: 400;
     line-height: 16px;
     margin-bottom: 32px;
-    
 
     @media (max-width: 994px) {
         display: none;
@@ -1970,9 +1969,9 @@ input[type="number"] {
 .delivery__info.purchase-return .tooltip {
     left: 45%;
     width: 280px;
-    top: 114%;
+    top: 120%;
     -webkit-transform: translate(-45%, -114%);
-    transform: translate(-45%, -114%);
+    transform: translate(-45%, -120%);
 }
 
 .main__basket__product__pay-method {
